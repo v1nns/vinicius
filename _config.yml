@@ -27,6 +27,8 @@ github_username:  v1nns
 url: v1nns.github.io
 baseurl: /vinicius
 
+google_analytics: G-2FBBJC4ZWT
+
 # Build settings
 theme: minima
 
