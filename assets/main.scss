@@ -1,0 +1,80 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/** Basic styling */
+body {  background-color: #242526; 
+        color: white;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                              supported by Chrome, Edge, Opera and Firefox */}
+
+/** Images */
+img { max-width: 100%; vertical-align: middle; -webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; -user-drag: none; }
+
+/** Custom classes */
+.content { max-width: 960px; margin-top: 100px; margin-left: auto; margin-right: auto; }
+
+.profile { max-height: 200px; border-radius: 50%; box-shadow: 0px 0px 2px gainsboro; display: block; margin-left: auto; margin-right: auto; margin-bottom: 10px; } 
+
+.name { text-align: center; font-weight: bold; margin-bottom: 30px;}
+
+.profession { text-align: center; font-weight: 400; margin-bottom: 30px; }
+
+.bio { color: gainsboro; margin: auto; width: 75%; text-align: justify; margin-bottom: 50px;}
+
+.social { display: flex;  align-items: flex-end; justify-content: center; }
+
+i.fa-icon { margin-right: 10px; border-radius: 50%; box-shadow: 0px 0px 2px white; padding: 0.3em 0.4em; }
+
+.copyright { text-align: center; }
+
+/** 3d animation */
+.icon-3d { padding: 10px; color: white; }
+.icon-3d:hover { -webkit-animation: icon3d 200ms infinite; animation: icon3d 200ms infinite; }
+  
+@keyframes icon3d { 
+    0% { text-shadow: 5px 4px red, -5px -6px blue; }
+    25% { text-shadow: -5px -6px red, 5px 4px blue; }
+    50% { text-shadow: 5px -4px red, -8px 4px blue; }
+    75% { text-shadow: -8px -4px red, -5px -4px blue; }
+    100% { text-shadow: -5px 0 red, 5px -4px blue; }
+}
+
+/** Footer */
+.site-footer { background-color: black; }
+
+/** Hyperlink animation */
+a.playlist {
+    color: aquamarine;
+    text-decoration: none;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+a.platlist:hover {
+    color: hotPink;
+}
+
+@media (-webkit-min-device-pixel-ratio:0) {
+    a.playlist {
+        background-color: skyBlue;
+        background-image: -webkit-linear-gradient(left, hotPink 0%, orange 50%, transparent 50%);
+        background-position: 100% 0;
+        background-size: 200% 200%;
+        color: transparent;
+        -webkit-transition: .1s .2s;
+        transition: .1s .2s;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    a.playlist:hover {
+        background-position: 0 0;
+        color: transparent;
+        transition: .4s 0;
+    }
+}
