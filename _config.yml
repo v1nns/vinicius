@@ -24,8 +24,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   A creative software engineer.
 
 github_username:  v1nns
-url: v1nns.github.io
-baseurl: /vinicius
+url: viniciuslongaray.dev
+baseurl: ""
 
 google_analytics: UA-193499290-1
 
