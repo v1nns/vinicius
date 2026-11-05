@@ -3,8 +3,9 @@
 @font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/jetbrains-mono-400.woff2) format("woff2"); }
 @font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: swap; src: url(/assets/fonts/jetbrains-mono-700.woff2) format("woff2"); }
 :root {
-  --bg: #0f131d; --pane: #131826; --line: #2b3552; --ink: #c9d1e6; --dim: #7c87a6;
-  --amber: #ffb454; --cyan: #5ccfe6; --green: #8fd96c; --pink: #f28fad;
+  /* Tokyo Night (night). --dim is Moon's fg_dark: the night comment gray is too faint for small text. */
+  --bg: #16161e; --pane: #1a1b26; --line: #3b4261; --ink: #c0caf5; --dim: #828bb8;
+  --amber: #e0af68; --cyan: #7dcfff; --green: #9ece6a; --pink: #f7768e;
   --mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", "DejaVu Sans Mono", monospace;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
@@ -52,8 +53,8 @@ body.term { background: var(--bg); color: var(--ink); font: 14px/1.6 var(--mono)
 .diff { font-size: 13px; overflow-x: auto; }
 .dl { display: grid; grid-template-columns: 2ch 9ch minmax(0, 1fr); padding: 1px 8px; }
 .dl.hunk { display: block; color: var(--cyan); padding-bottom: 4px; }
-.dl.del { background: #3a1c26; color: #f5a3b6; }
-.dl.add { background: #1b3324; color: #a6e88f; }
+.dl.del { background: #37222c; color: #f7768e; }
+.dl.add { background: #20303b; color: #9ece6a; }
 .dl.note { grid-template-columns: 2ch minmax(0, 1fr); font-style: italic; }
 .dl .k { opacity: .75; }
 /* Played once when the panel scrolls into view; without JS or with reduced motion the diff is simply static. */
@@ -80,7 +81,7 @@ body.term { background: var(--bg); color: var(--ink); font: 14px/1.6 var(--mono)
 .neo-colors i { width: 24px; height: 14px; }
 .neo-colors i:nth-child(1) { background: var(--line); } .neo-colors i:nth-child(2) { background: var(--pink); }
 .neo-colors i:nth-child(3) { background: var(--green); } .neo-colors i:nth-child(4) { background: var(--amber); }
-.neo-colors i:nth-child(5) { background: #8aa4ff; } .neo-colors i:nth-child(6) { background: #c59bff; }
+.neo-colors i:nth-child(5) { background: #7aa2f7; } .neo-colors i:nth-child(6) { background: #bb9af7; }
 .neo-colors i:nth-child(7) { background: var(--cyan); } .neo-colors i:nth-child(8) { background: var(--ink); }
 .who { display: flex; gap: 16px; align-items: center; }
 .avatar { width: 88px; height: 88px; border: 1px solid var(--line); image-rendering: pixelated; filter: saturate(.85); }
@@ -113,8 +114,8 @@ body.term { background: var(--bg); color: var(--ink); font: 14px/1.6 var(--mono)
 .table { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 680px; }
 th { text-align: left; font-weight: 400; color: var(--bg); background: var(--green); padding: 2px 10px; }
-td { padding: 6px 10px; border-bottom: 1px solid #1c2338; vertical-align: top; }
-tbody tr:hover td { background: #1a2236; }
+td { padding: 6px 10px; border-bottom: 1px solid #24283b; vertical-align: top; }
+tbody tr:hover td { background: #292e42; }
 td.pid { color: var(--dim); font-variant-numeric: tabular-nums; }
 td.lang { color: var(--cyan); white-space: nowrap; }
 td.n { color: var(--amber); text-align: right; font-variant-numeric: tabular-nums; }
@@ -127,9 +128,9 @@ td.n { color: var(--amber); text-align: right; font-variant-numeric: tabular-num
 .fine { font-size: 11px; color: var(--dim); }
 
 .cmd { width: min(720px, calc(100vw - 32px)); max-height: min(70vh, 520px); margin: 12vh auto auto; padding: 0;
-  background: #0b0f18; color: var(--ink); border: 1px solid var(--line); font: 14px/1.6 var(--mono); box-shadow: 0 24px 64px #000a; }
+  background: var(--bg); color: var(--ink); border: 1px solid var(--line); font: 14px/1.6 var(--mono); box-shadow: 0 24px 64px #000a; }
 .cmd[open] { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; }
-.cmd::backdrop { background: #05080ebb; }
+.cmd::backdrop { background: #0d0e14bb; }
 .cmd-head { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px 6px 16px; border-bottom: 1px solid var(--line); }
 .cmd-head h2 { font-size: 12px; font-weight: 400; color: var(--amber); }
 .cmd-x { background: none; border: 0; color: var(--dim); font: 12px var(--mono); cursor: pointer; padding: 4px 6px; }
@@ -144,17 +145,17 @@ td.n { color: var(--amber); text-align: right; font-variant-numeric: tabular-num
 .viz .lo { color: var(--green); } .viz .mid { color: var(--amber); } .viz .hi { color: var(--pink); }
 .viz.rain, .viz.train { line-height: 1.2; }
 .viz.rain { color: var(--green); }
-.viz.rain b { color: #eaffdf; font-weight: 400; } .viz.rain i { font-style: normal; opacity: .45; }
+.viz.rain b { color: #d7f5b6; font-weight: 400; } .viz.rain i { font-style: normal; opacity: .45; }
 .viz.train { color: var(--ink); }
 @media (pointer: coarse) { .cmd input { font-size: 16px; } } /* stops iOS zoom on focus */
 .foot { max-width: 1200px; margin: 0 auto; padding: 16px 0 28px; font-size: 11px; color: var(--dim); display: grid; gap: 8px; justify-items: end; text-align: right; }
 .colophon { justify-self: end; text-align: left; max-width: 100%; font-size: 11px; }
 .colophon .dl { grid-template-columns: 2ch minmax(0, 1fr); }
 
-.boot { position: fixed; inset: 0; z-index: 20; background: #05070c; color: #9fb3d8; padding: 24px; padding-top: max(24px, env(safe-area-inset-top)); white-space: pre-wrap; font-size: 13px; line-height: 1.8; cursor: pointer; }
+.boot { position: fixed; inset: 0; z-index: 20; background: #0d0e14; color: #a9b1d6; padding: 24px; padding-top: max(24px, env(safe-area-inset-top)); white-space: pre-wrap; font-size: 13px; line-height: 1.8; cursor: pointer; }
 .boot i { font-style: normal; color: var(--green); }
 
-body.crt { text-shadow: 0 0 4px #5ccfe655; }
+body.crt { text-shadow: 0 0 4px #7dcfff55; }
 body.crt::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 30;
   background: repeating-linear-gradient(0deg, #00000038 0 1px, transparent 1px 3px), radial-gradient(ellipse at center, transparent 60%, #00000080 100%); }
 
