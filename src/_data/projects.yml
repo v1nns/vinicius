@@ -1,0 +1,42 @@
+# Sorted by stars. Update `stars` now and then; they are not fetched live.
+- name: spectrum
+  url: https://github.com/v1nns/spectrum
+  lang: C++17
+  stars: 49
+  about: Console music player with an audio visualizer, built from scratch.
+
+- name: dotfiles
+  url: https://github.com/v1nns/dotfiles
+  lang: Python
+  stars: 4
+  about: His whole Linux setup, scripted. Ricing all the way to the top.
+
+- name: yang
+  url: https://github.com/v1nns/yang
+  lang: JavaScript
+  stars: 3
+  about: Browser extension that watches Gerrit Change-Ids for updates.
+
+- name: gap
+  url: https://github.com/v1nns/gap
+  lang: JavaScript
+  stars: 2
+  about: Analytics for PUBG matches played with friends.
+
+- name: EmotionPi
+  url: https://github.com/v1nns/EmotionPi
+  lang: C++ · Java
+  stars: 1
+  about: Facial expression recognition on a Raspberry Pi with OpenCV, plus an Android game. His final project (TCC) at PUCRS.
+
+- name: sddm-arcade
+  url: https://github.com/v1nns/sddm-arcade
+  lang: QML
+  stars: 0
+  about: Arcade-style login screen theme for SDDM.
+
+- name: yasl
+  url: https://github.com/v1nns/yasl
+  lang: Rust
+  stars: 0
+  about: Reads now-playing info from spotifyd or any media player over D-Bus.

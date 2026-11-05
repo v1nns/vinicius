@@ -1,0 +1,55 @@
+---
+layout: base.njk
+title: Vinicius Moura Longaray · CV
+permalink: /cv/
+bodyClass: cv
+scripts: [email.js]
+---
+{%- set now = timeline[0] -%}
+<nav class="cv-nav"><a href="/">← back to the terminal</a></nav>
+<main class="sheet">
+  <header class="cv-head">
+    <h1>{{ profile.name }}</h1>
+    <p class="cv-role">{{ now.role }} at {{ now.company }} · {{ profile.location }}</p>
+    <ul class="cv-contact">
+      <li><code class="email" data-user="{{ profile.email.user }}" data-domain="{{ profile.email.domain }}">email on LinkedIn</code> <button class="copy" type="button" hidden>copy</button></li>
+      <li><a href="{{ profile.links.linkedin }}">linkedin.com/in/{{ profile.links.linkedin_user }}</a></li>
+      <li><a href="{{ profile.links.github }}">github.com/{{ profile.links.github_user }}</a></li>
+      <li><a href="{{ profile.url }}">{{ profile.url | replace("https://", "") }}</a></li>
+    </ul>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    {% for p in profile.about %}<p>{{ p }}</p>{% endfor %}
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    {%- for e in timeline %}{% if e.company %}
+    <article class="job">
+      <div class="job-head"><h3>{{ e.role }} · {{ e.company }}</h3><span class="when">{{ e.start | month }} – {{ e.end | month }}</span></div>
+      <p>{{ e.summary }}</p>
+      {% if e.highlights %}<ul>{% for h in e.highlights %}<li>{{ h }}</li>{% endfor %}</ul>{% endif %}
+    </article>
+    {%- endif %}{% endfor %}
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    {%- for e in timeline %}{% if e.school %}
+    <div class="job"><div class="job-head"><h3>{{ e.degree }} · {{ e.school }}</h3><span class="when">{{ e.start }} – {{ e.end }}</span></div>
+    {% if e.highlights %}<ul>{% for h in e.highlights %}<li>{{ h }}</li>{% endfor %}</ul>{% endif %}</div>
+    {%- endif %}{% endfor %}
+  </section>
+
+  <section>
+    <h2>Selected projects</h2>
+    <ul>{% for p in projects.slice(0, 4) %}<li><a href="{{ p.url }}">{{ p.name }}</a> ({{ p.lang }}): {{ p.about }}</li>{% endfor %}</ul>
+  </section>
+
+  <section class="cv-cols">
+    <div><h2>Skills</h2><p>{% for g in profile.stack %}{{ g.items | join(", ") }}{% if not loop.last %}, {% endif %}{% endfor %}</p></div>
+    <div><h2>Languages</h2><p>{% for l in profile.spoken %}{{ l.lang }} ({{ l.level }}){% if not loop.last %}, {% endif %}{% endfor %}</p></div>
+  </section>
+</main>

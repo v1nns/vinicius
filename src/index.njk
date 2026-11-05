@@ -1,0 +1,135 @@
+---
+layout: base.njk
+title: Vinicius Moura Longaray · Embedded Software Engineer
+bodyClass: term
+scripts: [email.js, terminal.js]
+---
+<div class="boot" id="boot" hidden aria-hidden="true"></div>
+<a class="skip" href="#about">Skip to content</a>
+
+<header class="bar">
+  <span><b>vinicius@longaray</b>:~</span>
+  <a href="{{ profile.links.github }}" target="_blank" rel="noopener">github</a>
+  <a href="{{ profile.links.linkedin }}" target="_blank" rel="noopener">linkedin</a>
+  <a href="/cv/">cv</a>
+  <a href="{{ profile.links.playlist }}" id="playlist" target="_blank" rel="noopener">♪ playlist ↗</a>
+  <button class="cmd-open" id="cmdOpen" type="button" aria-haspopup="dialog" hidden>❯ commands <kbd>/</kbd></button>
+  <span class="clk" id="clock" aria-hidden="true"></span>
+</header>
+
+<main class="grid">
+  <section class="pane p-about" id="about" aria-labelledby="h-about">
+    <h2 class="pt" id="h-about">about</h2><kbd class="pk" title="Press a">a</kbd>
+    <div class="about-main">
+      <div class="who">
+        <img class="avatar" src="/assets/images/avatar-176.jpg" alt="Vinicius" width="88" height="88">
+        <div>
+          <h1 class="name">{{ profile.name }}</h1>
+          <p class="whoami"><span>$ whoami →</span> {{ profile.tagline }}</p>
+          {%- set first = timeline | firstJob %}
+          <p class="facts">{{ profile.location }} · <span id="uptime" data-since="{{ first.start }}">in software since {{ first.start | month }}</span></p>
+        </div>
+      </div>
+      {% for p in profile.about %}<p class="bio">{{ p }}</p>{% endfor %}
+      <p class="tip"><b>RECRUITER TIP!</b> No commands required. Everything is on this page, and the one-page CV is at <a href="/cv/">/cv</a>.</p>
+    </div>
+    <aside class="neo" aria-label="My setup">
+      <p class="neo-cmd"><span>$</span> neofetch</p>
+      <p class="neo-host"><b>vinicius</b>@<b>longaray</b></p>
+      <p class="neo-rule" aria-hidden="true">-----------------</p>
+      <dl>
+        <dt>OS</dt><dd>CachyOS</dd>
+        <dt>WM</dt><dd>Hyprland</dd>
+        <dt>Shell</dt><dd>zsh</dd>
+        <dt>Terminal</dt><dd>kitty</dd>
+        <dt>Editor</dt><dd>Neovim</dd>
+        <dt>Font</dt><dd>JetBrains Mono</dd>
+      </dl>
+      <p class="neo-colors" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></p>
+    </aside>
+  </section>
+
+  <section class="pane p-log" id="experience" aria-labelledby="h-exp">
+    <h2 class="pt" id="h-exp">experience · git log --graph</h2><kbd class="pk" title="Press e">e</kbd>
+    <ol class="log">
+      {%- for e in timeline %}
+      <li>
+        <div class="row"><span class="g" aria-hidden="true">*</span><div>
+          <span class="h">{{ ((e.company or e.school) ~ e.start) | sha }}</span>
+          {% if loop.first %}<span class="ref">(HEAD -> main)</span>{% endif %}
+          {% if e.tag %}<span class="ref">(tag: {{ e.tag }})</span>{% endif %}
+          <b>{{ e.role or e.degree }}</b> @ {{ e.company or e.school }} <span class="d">· {{ e.start | year }}–{{ e.end | year }}</span>
+        </div></div>
+        {%- for h in (e.highlights or ([e.summary] if e.summary else [])) %}
+        <div class="row"><span class="g" aria-hidden="true">|</span><div class="m">{{ h }}</div></div>
+        {%- endfor %}
+        {%- if e.quip %}<div class="row"><span class="g" aria-hidden="true">|</span><div class="q"># {{ e.quip }}</div></div>{% endif %}
+      </li>
+      {%- endfor %}
+      <li><div class="row"><span class="g" aria-hidden="true">*</span><div><span class="h">0000000</span> <span class="d">initial commit: a kid, a 16-bit console, too many RPGs</span></div></div></li>
+    </ol>
+  </section>
+
+  {%- set cd = profile.career_diff %}
+  <section class="pane p-diff" id="diff" aria-labelledby="h-diff">
+    <h2 class="pt" id="h-diff">git diff {{ cd.range }} -- career</h2><kbd class="pk" title="Press d">d</kbd>
+    <div class="diff" id="careerDiff">
+      <div class="dl hunk">{{ cd.hunk }}</div>
+      {%- for r in cd.rows %}
+      <div class="dl del"><span class="sg" aria-label="removed">-</span><span class="k">{{ r.key }}:</span><span>{{ r.from }}</span></div>
+      <div class="dl add"><span class="sg" aria-label="added">+</span><span class="k">{{ r.key }}:</span><span>{{ r.to }}</span></div>
+      {%- endfor %}
+      <div class="dl add note"><span class="sg" aria-label="added">+</span><span># {{ cd.comment }}</span></div>
+    </div>
+  </section>
+
+  <section class="pane p-stack" id="stack" aria-labelledby="h-stack">
+    <h2 class="pt" id="h-stack">stack</h2><kbd class="pk" title="Press s">s</kbd>
+    {% for g in profile.stack %}
+    <div class="grp"><h3>{{ g.label }}</h3><ul class="chips">{% for i in g.items %}<li>{{ i }}</li>{% endfor %}</ul></div>
+    {% endfor %}
+    <div class="grp"><h3>speaks</h3><ul class="chips">{% for l in profile.spoken %}<li>{{ l.lang }} <span>· {{ l.level }}</span></li>{% endfor %}</ul></div>
+  </section>
+
+  <section class="pane p-proc" id="projects" aria-labelledby="h-proj">
+    <h2 class="pt" id="h-proj">projects · sorted by ★</h2><kbd class="pk" title="Press p">p</kbd>
+    <div class="table">
+      <table>
+        <thead><tr><th scope="col">PID</th><th scope="col">NAME</th><th scope="col">LANG</th><th scope="col">★</th><th scope="col">WHAT IT DOES</th></tr></thead>
+        <tbody>
+          {%- for p in projects %}
+          <tr><td class="pid">{{ 1000 + loop.index }}</td><td><a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a></td><td class="lang">{{ p.lang }}</td><td class="n">{{ p.stars }}</td><td>{{ p.about }}</td></tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="pane p-contact" id="contact" aria-labelledby="h-contact">
+    <h2 class="pt" id="h-contact">contact · customer support</h2><kbd class="pk" title="Press c">c</kbd>
+    <ul class="links">
+      <li><span>github</span> <a href="{{ profile.links.github }}" target="_blank" rel="noopener">{{ profile.links.github_user }}</a></li>
+      <li><span>linkedin</span> <a href="{{ profile.links.linkedin }}" target="_blank" rel="noopener">{{ profile.links.linkedin_user }}</a></li>
+      <li><span>mail</span> <code class="email" data-user="{{ profile.email.user }}" data-domain="{{ profile.email.domain }}">ask on LinkedIn</code> <button class="copy" type="button" hidden>copy</button></li>
+      <li><span>cv</span> <a href="/cv/">one page, prints nicely</a></li>
+    </ul>
+    <p class="fine">LIMITED WARRANTY. Free from defects in curiosity and work ethic. Void for tabs-vs-spaces debates, editor wars, and code written after 2 a.m.</p>
+  </section>
+</main>
+
+<dialog class="cmd" id="cmd" aria-labelledby="h-cmd">
+  <div class="cmd-head"><h2 id="h-cmd">vinicius@longaray: ~</h2><button class="cmd-x" id="cmdClose" type="button" aria-label="Close">esc ✕</button></div>
+  <div class="cmd-log" id="out" aria-live="polite"><p>Type <b>help</b> to list commands. Outside this window, press a · e · d · s · p · c to jump to a panel.</p></div>
+  <form id="cmdForm" autocomplete="off">
+    <label for="cmdIn">❯</label>
+    <input id="cmdIn" placeholder="type help" spellcheck="false" autocapitalize="off">
+  </form>
+</dialog>
+
+<footer class="foot">
+  <div class="diff colophon" aria-label="How this site changed">
+    <div class="dl del"><span class="sg" aria-label="removed">-</span><span>jekyll · minima · google analytics</span></div>
+    <div class="dl add"><span class="sg" aria-label="added">+</span><span>eleventy · a terminal · no cookies, no analytics</span></div>
+  </div>
+  <p>© {% year %} Vinicius M. Longaray · <a href="{{ profile.links.github }}/vinicius" target="_blank" rel="noopener">source</a></p>
+</footer>
