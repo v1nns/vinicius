@@ -1,0 +1,55 @@
+name: Vinicius Moura Longaray
+role: Embedded Software Engineer
+tagline: a creative software engineer
+location: Porto Alegre, Brazil
+url: https://viniciuslongaray.dev
+description: Embedded Software Engineer at Datacom, working on MPLS in a network operating system. C++, Embedded C and Python.
+
+about:
+  - I'm an embedded software engineer at Datacom, where I work mostly on MPLS inside a network operating system.
+  - Before that I spent six years at Grupo Zaffari, going from writing Point-of-Sale software in C++ to designing systems as an IT architect.
+  - I like fast-paced, agile teams and tools that live in the terminal. My best-known side project is spectrum, a music player that runs in your console.
+
+top_skills: [C++, Embedded C, Python]
+
+stack:
+  - label: day job
+    items: [C++, Embedded C, MPLS]
+  - label: side quests
+    items: [Python, JavaScript / TypeScript, Rust, Java, Lua, QML]
+  - label: lives in
+    items: [Linux, Neovim, the terminal]
+
+spoken:
+  - lang: Portuguese
+    level: native
+  - lang: English
+    level: full professional
+
+links:
+  github: https://github.com/v1nns
+  github_user: v1nns
+  linkedin: https://www.linkedin.com/in/vinicius-longaray
+  linkedin_user: vinicius-longaray
+  playlist: https://open.spotify.com/playlist/25JQIlPEkHYw9wIDF4HZw8
+
+# Split so the address never appears as plain text in the HTML; the page script joins it.
+email:
+  user: vmouralongaray
+  domain: gmail.com
+
+# Shown as a "git diff" panel on the home page.
+career_diff:
+  range: 2018..2019
+  hunk: "@@ -2015,4 +2019,∞ @@"
+  rows:
+    - key: role
+      from: IT Architect @ Grupo Zaffari
+      to: Embedded Software Engineer @ Datacom
+    - key: domain
+      from: retail · Point-of-Sale · store operations
+      to: network devices · MPLS
+    - key: runs on
+      from: checkout terminals, Android kiosks
+      to: switches
+  comment: back to writing code all day. on purpose.

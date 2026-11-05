@@ -1,0 +1,42 @@
+# Newest first. Jobs have `company`, education has `school`. Leave `end` empty for "now".
+# `quip` only shows on the terminal home page, never on /cv.
+- company: Datacom
+  role: Embedded Software Engineer
+  start: "2019-01"
+  end:
+  summary: Embedded software for network devices (a Network Operating System), plus software tools and utilities.
+  highlights:
+    - Works mostly on MPLS in the network operating system.
+  quip: Packets get labels; I make sure they land where they should.
+
+- school: Estácio
+  degree: Specialization in Software Engineering
+  tag: specialization
+  start: "2018"
+  end: "2019"
+
+- company: Grupo Zaffari
+  role: IT Architect
+  start: "2015-01"
+  end: "2018-12"
+  summary: Designed solutions across old, current and future systems, and led technology evaluation and selection.
+  highlights:
+    - Helped build the self-checkout Point-of-Sale.
+    - Shipped v1 of the mobile platform, with locked-down kiosk apps on enterprise Android devices for store operations.
+    - Prototyped e-paper price tags.
+  quip: Prices that update themselves.
+
+- company: Grupo Zaffari
+  role: Software Developer
+  start: "2012-12"
+  end: "2014-12"
+  summary: Point-of-Sale and retail applications in C++ and MFC, multithreaded, on UNIX and Windows.
+
+- school: PUCRS
+  degree: Bachelor's in Computer Engineering
+  tag: degree
+  start: "2010"
+  end: "2016"
+  highlights:
+    - "Final project (TCC): EmotionPi, built with a classmate. Facial expression analysis on a Raspberry Pi with OpenCV in C++, paired with an Android game."
+  quip: Teaching a Raspberry Pi to read faces.

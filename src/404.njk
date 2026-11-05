@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Command not found · Vinicius Moura Longaray
+permalink: /404.html
+bodyClass: term lost
+---
+<main class="pane p-lost" aria-labelledby="h-lost">
+  <h1 class="pt" id="h-lost">404</h1>
+  <p class="err">bash: <span id="path">this page</span>: command not found</p>
+  <p>The page you asked for doesn't exist. Maybe it was a typo, or maybe it moved.</p>
+  <p class="big">CONTINUE?</p>
+  <ul class="links">
+    <li><a href="/">[Y] back to the terminal</a></li>
+    <li><a href="/cv/">[C] read the CV</a></li>
+  </ul>
+</main>
+<script>
+  document.getElementById("path").textContent = location.pathname.replace(/^\//, "") || "this page";
+  addEventListener("keydown", e => { if (e.key === "y" || e.key === "Y") location.href = "/"; if (e.key === "c" || e.key === "C") location.href = "/cv/"; });
+</script>
