@@ -1,4 +1,7 @@
 /* Terminal pages (home, 404) are dark only, like a terminal. /cv is light and print-first. */
+/* JetBrains Mono, self-hosted (latin subset from @fontsource/jetbrains-mono 5.2.8, SIL OFL 1.1: /assets/fonts/OFL.txt). */
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/jetbrains-mono-400.woff2) format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: swap; src: url(/assets/fonts/jetbrains-mono-700.woff2) format("woff2"); }
 :root {
   --bg: #0f131d; --pane: #131826; --line: #2b3552; --ink: #c9d1e6; --dim: #7c87a6;
   --amber: #ffb454; --cyan: #5ccfe6; --green: #8fd96c; --pink: #f28fad;
