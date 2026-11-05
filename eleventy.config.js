@@ -1,3 +1,5 @@
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
 import yaml from "js-yaml";
 
 export default function (config) {
@@ -21,6 +23,9 @@ export default function (config) {
   // Oldest job in the timeline (entries are newest first).
   config.addFilter("firstJob", timeline => timeline.filter(e => e.company).at(-1));
   config.addShortcode("year", () => String(new Date().getFullYear()));
+  // "/assets/css/site.css" -> "/assets/css/site.css?v=<content hash>", so a deploy that changes the file
+  // gets a new URL that Cloudflare and browsers haven't cached (they keep assets for 4 hours).
+  config.addFilter("v", url => url + "?v=" + createHash("sha256").update(readFileSync("src" + url)).digest("hex").slice(0, 8));
 
   // Timeline (newest first) as git log --graph rows: jobs on main, each school on a side
   // branch that runs from its start up to the first job that began before it ended.
