@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-18T13:26:45+00:00",
+  "generatedAt": "2026-11-18T14:16:03+00:00",
   "title": "Design System: viniciuslongaray.dev",
   "extensions": {
     "colorMeta": {
@@ -229,6 +229,106 @@
           "oklch(95% 0.003 278)"
         ]
       },
+      "boot-ink": {
+        "role": "neutral",
+        "displayName": "Boot Ink",
+        "canonical": "#a9b1d6",
+        "tonalRamp": [
+          "oklch(15% 0.008 275)",
+          "oklch(26% 0.014 275)",
+          "oklch(38% 0.027 275)",
+          "oklch(49% 0.041 275)",
+          "oklch(61% 0.053 275)",
+          "oklch(72% 0.039 275)",
+          "oklch(84% 0.026 275)",
+          "oklch(95% 0.012 275)"
+        ]
+      },
+      "rain-glint": {
+        "role": "secondary",
+        "displayName": "Rain Glint",
+        "canonical": "#d7f5b6",
+        "tonalRamp": [
+          "oklch(15% 0.013 129)",
+          "oklch(26% 0.022 129)",
+          "oklch(38% 0.045 129)",
+          "oklch(49% 0.067 129)",
+          "oklch(61% 0.087 129)",
+          "oklch(72% 0.064 129)",
+          "oklch(84% 0.042 129)",
+          "oklch(95% 0.020 129)"
+        ]
+      },
+      "swatch-blue": {
+        "role": "neutral",
+        "displayName": "Swatch Blue",
+        "canonical": "#7aa2f7",
+        "tonalRamp": [
+          "oklch(15% 0.020 264)",
+          "oklch(26% 0.034 264)",
+          "oklch(38% 0.067 264)",
+          "oklch(49% 0.101 264)",
+          "oklch(61% 0.130 264)",
+          "oklch(72% 0.096 264)",
+          "oklch(84% 0.063 264)",
+          "oklch(95% 0.029 264)"
+        ]
+      },
+      "swatch-purple": {
+        "role": "neutral",
+        "displayName": "Swatch Purple",
+        "canonical": "#bb9af7",
+        "tonalRamp": [
+          "oklch(15% 0.020 299)",
+          "oklch(26% 0.034 299)",
+          "oklch(38% 0.068 299)",
+          "oklch(49% 0.102 299)",
+          "oklch(61% 0.132 299)",
+          "oklch(72% 0.098 299)",
+          "oklch(84% 0.064 299)",
+          "oklch(95% 0.030 299)"
+        ]
+      },
+      "crt-scanline": {
+        "role": "neutral",
+        "displayName": "CRT Scanline",
+        "canonical": "#00000038"
+      },
+      "crt-vignette": {
+        "role": "neutral",
+        "displayName": "CRT Vignette",
+        "canonical": "#00000080"
+      },
+      "crystal-light": {
+        "role": "secondary",
+        "displayName": "Crystal Light",
+        "canonical": "#e6f7ff",
+        "tonalRamp": [
+          "oklch(15% 0.003 228)",
+          "oklch(26% 0.005 228)",
+          "oklch(38% 0.011 228)",
+          "oklch(49% 0.016 228)",
+          "oklch(61% 0.021 228)",
+          "oklch(72% 0.015 228)",
+          "oklch(84% 0.010 228)",
+          "oklch(95% 0.005 228)"
+        ]
+      },
+      "crystal-shade": {
+        "role": "secondary",
+        "displayName": "Crystal Shade",
+        "canonical": "#3f86b8",
+        "tonalRamp": [
+          "oklch(15% 0.016 242)",
+          "oklch(26% 0.027 242)",
+          "oklch(38% 0.053 242)",
+          "oklch(49% 0.080 242)",
+          "oklch(61% 0.103 242)",
+          "oklch(72% 0.076 242)",
+          "oklch(84% 0.050 242)",
+          "oklch(95% 0.023 242)"
+        ]
+      },
       "cv-desk": {
         "role": "neutral",
         "displayName": "CV Desk",
@@ -371,6 +471,10 @@
       "cv-section-label": {
         "displayName": "CV Section Label",
         "purpose": "Uppercase mono section labels; the bridge to the terminal."
+      },
+      "alert": {
+        "displayName": "Alert",
+        "purpose": "The 404's CONTINUE? only."
       }
     },
     "shadows": [
@@ -400,9 +504,32 @@
         "name": "diff-type",
         "value": "0.7s steps(28), 0.55s stagger",
         "purpose": "Added diff lines type in once on scroll into view; static under reduced motion."
+      },
+      {
+        "name": "sprite-idle",
+        "value": "breathe 1.6s steps(1) infinite; blink 4.2s steps(1) infinite",
+        "purpose": "Neofetch sprite idle, inside me.svg; off under reduced motion."
+      },
+      {
+        "name": "crystal-float",
+        "value": "float 2.4s steps(1) infinite, 1px",
+        "purpose": "Save crystal bob and glint, inside save-crystal.svg; off under reduced motion."
+      },
+      {
+        "name": "p2-blink",
+        "value": "1.1s steps(1) x4",
+        "purpose": "2P PRESS START blinks four times when first fully in view, then stays lit."
       }
     ],
     "breakpoints": [
+      {
+        "name": "save-compact",
+        "value": "480px"
+      },
+      {
+        "name": "table-stack",
+        "value": "600px"
+      },
       {
         "name": "cv-cols",
         "value": "600px"
@@ -475,23 +602,32 @@
       "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-diff{font:13px/1.6 var(--mono);background:var(--pane)} .ds-hunk{color:var(--cyan);padding:1px 8px 4px} .ds-dl{display:grid;grid-template-columns:2ch 9ch minmax(0,1fr);padding:1px 8px} .ds-del{background:#37222c;color:var(--pink)} .ds-add{background:#20303b;color:var(--green)} .ds-dl span:nth-child(2){opacity:.75}"
     },
     {
+      "name": "Save Point",
+      "kind": "custom",
+      "refersTo": "save-slot",
+      "description": "Contact as an RPG save menu: crystal, SAVE GAME?, numbered slots with an amber cursor on hover/focus.",
+      "html": "<div class=\"ds-save\"><svg class=\"ds-crystal\" viewBox=\"0 0 10 12\" width=\"40\" height=\"48\" shape-rendering=\"crispEdges\"><path fill=\"#0d0e14\" d=\"M4 0h2v1h1v1h1v1h1v1h1v2H9v1H8v1H7v1H6v1H4V9H3V8H2V7H1V6H0V4h1V3h1V2h1V1h1z\"/><path fill=\"#7dcfff\" d=\"M4 1h2v1h1v1h1v4H7v1H6v1H4V8H3V7H2V3h1V2h1z\"/><path fill=\"#e6f7ff\" d=\"M4 1h1v1H4zM3 2h1v1H3zM2 3h1v2H2z\"/><path fill=\"#3f86b8\" d=\"M7 3h1v4H7zM6 7h1v1H6zM5 8h1v1H5z\"/></svg><div><p class=\"ds-q\">SAVE GAME? <span>2P PRESS START</span></p><ol class=\"ds-slots\"><li><span>github</span><a href=\"#\">v1nns</a></li><li><span>linkedin</span><a href=\"#\">vinicius-longaray</a></li><li><span>cv</span><a href=\"#\">one page, prints nicely</a></li></ol></div></div>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-save{display:flex;gap:20px;align-items:flex-start;padding:16px;background:var(--pane);border:1px solid var(--line);font:14px/1.6 var(--mono);color:var(--ink)} .ds-crystal{flex:none} .ds-q{margin:0 0 8px;color:#fff;letter-spacing:.08em} .ds-q span{margin-left:18px;color:var(--amber);font-size:12px} .ds-slots{counter-reset:s;margin:0;padding:0;list-style:none;display:grid;gap:4px} .ds-slots li{counter-increment:s;display:grid;grid-template-columns:4ch 9ch auto;justify-content:start} .ds-slots li::before{content:'[' counter(s) ']';color:var(--dim)} .ds-slots li:hover::before,.ds-slots li:focus-within::before{content:'▸';color:var(--amber)} .ds-slots span{color:var(--dim)} .ds-slots a{color:var(--cyan);text-decoration:none;border-bottom:1px dotted currentColor} .ds-slots a:hover{color:var(--amber)} .ds-slots a:focus-visible{outline:2px solid var(--amber);outline-offset:2px}"
+    },
+    {
       "name": "Projects Table",
       "kind": "custom",
       "refersTo": "table-header",
-      "description": "ps-style table: green header band, tabular PIDs, amber stars.",
+      "description": "ps-style table: green header band, tabular PIDs, amber stars; restacks into two-line entries under 600px.",
       "html": "<table class=\"ds-tbl\"><thead><tr><th>PID</th><th>NAME</th><th>LANG</th><th>★</th></tr></thead><tbody><tr><td class=\"pid\">1001</td><td><a href=\"#\">spectrum</a></td><td class=\"lang\">C++17</td><td class=\"n\">49</td></tr><tr><td class=\"pid\">1002</td><td><a href=\"#\">dotfiles</a></td><td class=\"lang\">Python</td><td class=\"n\">4</td></tr></tbody></table>",
       "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-tbl{width:100%;border-collapse:collapse;font:13px/1.6 var(--mono);color:var(--ink);background:var(--pane)} .ds-tbl th{text-align:left;font-weight:400;color:var(--bg);background:var(--green);padding:2px 10px} .ds-tbl td{padding:6px 10px;border-bottom:1px solid #24283b} .ds-tbl tbody tr:hover td{background:#292e42} .ds-tbl .pid{color:var(--dim);font-variant-numeric:tabular-nums} .ds-tbl .lang{color:var(--cyan)} .ds-tbl .n{color:var(--amber);text-align:right;font-variant-numeric:tabular-nums} .ds-tbl a{color:var(--cyan);text-decoration:none;border-bottom:1px dotted currentColor} .ds-tbl a:hover{color:var(--amber)}"
     }
   ],
   "narrative": {
     "northStar": "The Night Shift Session",
-    "overview": "The site is a terminal left open late at night: Tokyo Night navy, an amber prompt waiting, and everything on screen is real output from a real shell. `git log --graph` is the career, `git diff` is the job change, `neofetch` is the actual setup, the projects table is `ps` sorted by stars. The mood is cozy, nerdy and warm: the warmth of a late session and the 16-bit games behind it, carried by quips in the small print rather than by decoration.\n\nDensity is a calm tmux layout, not a btop wall. Content sits in bordered panes on a 12-column grid, each pane titled in box-drawing brackets with a keyboard shortcut in its opposite corner. Monospace is everywhere because the whole world is a terminal, not as a \"technical\" garnish. The `/cv` page is a deliberate sub-theme: daylight, paper and system sans, built to be printed, linked back to the terminal by one mono nav line and mono section labels.\n\nThe one hard rejection: no fake terminal output. Every command, stat, diff and table shows real data; humor lives in the comments and fine print, never in invented numbers.",
+    "overview": "The site is a terminal left open late at night: Tokyo Night navy, an amber prompt waiting, and everything on screen is real output from a real shell. `git log --graph` is the career, `git diff` is the job change, `neofetch` is the actual setup, the projects table is `ps` sorted by stars. The mood is cozy, nerdy and warm: the warmth of a late session and the 16-bit games behind it, carried by quips in the small print and by a few pixel cameos: a 16-bit sprite of him in the neofetch block, a save crystal at the contact point, job classes in the career diff, and a secrets counter in the command palette.\n\nDensity is a calm tmux layout, not a btop wall. Content sits in bordered panes on a 12-column grid, each pane titled in box-drawing brackets with a keyboard shortcut in its opposite corner. Monospace is everywhere because the whole world is a terminal, not as a \"technical\" garnish. The `/cv` page is a deliberate sub-theme: daylight, paper and system sans, built to be printed, linked back to the terminal by one mono nav line and mono section labels.\n\nThe one hard rejection: no fake terminal output. Every command, stat, diff and table shows real data; humor lives in the comments and fine print, never in invented numbers.",
     "keyCharacteristics": [
       "Tokyo Night (night) palette with Moon's lighter gray for readable small text.",
       "JetBrains Mono, self-hosted, at 11–14px; one large bold name is the only display moment.",
       "Bordered square panes, titled `┤ name ├` in amber, with a shortcut key in the top-right corner.",
       "Flat surfaces; depth comes from the floor/pane two-tone and 1px slate rules.",
-      "Motion is rare and earned: a boot screen, a pane flash on jump, a diff that types itself once.",
+      "Motion is rare and earned: a boot screen, a pane flash on jump, a diff that types itself once, and the small idle loops of the pixel cameos.",
+      "16-bit games show up as cameos, never as the frame: pixel art is small, integer-scaled and placed where a terminal or RPG would put it.",
       "`/cv` is the light, print-first counterpart sharing the content, not the look."
     ],
     "rules": [
@@ -507,13 +643,18 @@
       },
       {
         "name": "The Weight-Not-Size Rule",
-        "body": "On terminal pages, emphasis is bold or white or amber, never a bigger font. Only the name gets size.",
+        "body": "On terminal pages, emphasis is bold or white or amber, never a bigger font. Only the name (and the 404's one-word prompt) gets size. \"SAVE GAME?\" is white and tracked at 0.08em, not enlarged.",
         "section": "typography"
       },
       {
         "name": "The TUI Rule",
         "body": "Panes are separated by borders and tone, never by shadows. A shadow means \"this is above the page\".",
         "section": "elevation"
+      },
+      {
+        "name": "The Pixel Cameo Rule",
+        "body": "Pixel art is original, drawn on a tiny grid (16×24 for the sprite, 10×12 for the crystal), shown at an exact integer scale (4×, or 3× for the crystal on phones) with crisp edges, outlined in Boot Black and colored from this palette. It appears as a cameo inside a pane, never as a background, border or frame.",
+        "section": "shapes"
       }
     ],
     "dos": [
@@ -523,13 +664,16 @@
       "Do keep small text on `dusk-gray` or brighter; it was chosen for contrast at 11–13px.",
       "Do let wide content scroll inside its pane, and stack panes to full width under 900px.",
       "Do keep motion one-shot and skippable, with a static fallback for reduced motion.",
-      "Do keep `/cv` light, sans and printable, sharing only the mono section labels with the terminal."
+      "Do keep `/cv` light, sans and printable, sharing only the mono section labels with the terminal.",
+      "Do keep pixel art as small, integer-scaled, original cameos from the palette (The Pixel Cameo Rule).",
+      "Do keep `/cv` on one printed page on both A4 and Letter."
     ],
     "donts": [
       "Don't fake terminal output: no invented stats, fake players, faux progress bars or made-up logs. Humor goes in comments and fine print.",
       "Don't introduce a second display size on terminal pages; emphasize with weight, white or amber.",
       "Don't use shadows to separate panes; borders and tone do that (The TUI Rule).",
-      "Don't load fonts or scripts from third parties; JetBrains Mono stays self-hosted."
+      "Don't load fonts or scripts from third parties; JetBrains Mono stays self-hosted.",
+      "Don't blink or loop forever in the page's text; attention effects run a few times and settle (the sprite and crystal idles are the exception, and they stop under reduced motion)."
     ]
   }
 }
