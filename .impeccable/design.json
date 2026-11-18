@@ -1,0 +1,535 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T13:26:45+00:00",
+  "title": "Design System: viniciuslongaray.dev",
+  "extensions": {
+    "colorMeta": {
+      "night-floor": {
+        "role": "neutral",
+        "displayName": "Night Floor",
+        "canonical": "#16161e",
+        "tonalRamp": [
+          "oklch(15% 0.002 285)",
+          "oklch(26% 0.004 285)",
+          "oklch(38% 0.008 285)",
+          "oklch(49% 0.012 285)",
+          "oklch(61% 0.016 285)",
+          "oklch(72% 0.012 285)",
+          "oklch(84% 0.008 285)",
+          "oklch(95% 0.004 285)"
+        ]
+      },
+      "pane-navy": {
+        "role": "neutral",
+        "displayName": "Pane Navy",
+        "canonical": "#1a1b26",
+        "tonalRamp": [
+          "oklch(15% 0.003 280)",
+          "oklch(26% 0.005 280)",
+          "oklch(38% 0.011 280)",
+          "oklch(49% 0.016 280)",
+          "oklch(61% 0.021 280)",
+          "oklch(72% 0.016 280)",
+          "oklch(84% 0.010 280)",
+          "oklch(95% 0.005 280)"
+        ]
+      },
+      "rule-slate": {
+        "role": "neutral",
+        "displayName": "Rule Slate",
+        "canonical": "#3b4261",
+        "tonalRamp": [
+          "oklch(15% 0.008 274)",
+          "oklch(26% 0.014 274)",
+          "oklch(38% 0.027 274)",
+          "oklch(49% 0.041 274)",
+          "oklch(61% 0.053 274)",
+          "oklch(72% 0.039 274)",
+          "oklch(84% 0.026 274)",
+          "oklch(95% 0.012 274)"
+        ]
+      },
+      "moon-ink": {
+        "role": "neutral",
+        "displayName": "Moon Ink",
+        "canonical": "#c0caf5",
+        "tonalRamp": [
+          "oklch(15% 0.009 275)",
+          "oklch(26% 0.016 275)",
+          "oklch(38% 0.031 275)",
+          "oklch(49% 0.047 275)",
+          "oklch(61% 0.060 275)",
+          "oklch(72% 0.045 275)",
+          "oklch(84% 0.029 275)",
+          "oklch(95% 0.014 275)"
+        ]
+      },
+      "dusk-gray": {
+        "role": "neutral",
+        "displayName": "Dusk Gray",
+        "canonical": "#828bb8",
+        "tonalRamp": [
+          "oklch(15% 0.010 276)",
+          "oklch(26% 0.017 276)",
+          "oklch(38% 0.035 276)",
+          "oklch(49% 0.052 276)",
+          "oklch(61% 0.067 276)",
+          "oklch(72% 0.050 276)",
+          "oklch(84% 0.032 276)",
+          "oklch(95% 0.015 276)"
+        ]
+      },
+      "headline-white": {
+        "role": "neutral",
+        "displayName": "Headline White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.000 90)",
+          "oklch(26% 0.000 90)",
+          "oklch(38% 0.000 90)",
+          "oklch(49% 0.000 90)",
+          "oklch(61% 0.000 90)",
+          "oklch(72% 0.000 90)",
+          "oklch(84% 0.000 90)",
+          "oklch(95% 0.000 90)"
+        ]
+      },
+      "prompt-amber": {
+        "role": "primary",
+        "displayName": "Prompt Amber",
+        "canonical": "#e0af68",
+        "tonalRamp": [
+          "oklch(15% 0.016 75)",
+          "oklch(26% 0.027 75)",
+          "oklch(38% 0.054 75)",
+          "oklch(49% 0.081 75)",
+          "oklch(61% 0.104 75)",
+          "oklch(72% 0.077 75)",
+          "oklch(84% 0.050 75)",
+          "oklch(95% 0.023 75)"
+        ]
+      },
+      "link-cyan": {
+        "role": "secondary",
+        "displayName": "Link Cyan",
+        "canonical": "#7dcfff",
+        "tonalRamp": [
+          "oklch(15% 0.016 236)",
+          "oklch(26% 0.027 236)",
+          "oklch(38% 0.053 236)",
+          "oklch(49% 0.080 236)",
+          "oklch(61% 0.103 236)",
+          "oklch(72% 0.077 236)",
+          "oklch(84% 0.050 236)",
+          "oklch(95% 0.023 236)"
+        ]
+      },
+      "shell-green": {
+        "role": "secondary",
+        "displayName": "Shell Green",
+        "canonical": "#9ece6a",
+        "tonalRamp": [
+          "oklch(15% 0.021 130)",
+          "oklch(26% 0.035 130)",
+          "oklch(38% 0.071 130)",
+          "oklch(49% 0.106 130)",
+          "oklch(61% 0.137 130)",
+          "oklch(72% 0.102 130)",
+          "oklch(84% 0.066 130)",
+          "oklch(95% 0.031 130)"
+        ]
+      },
+      "graph-pink": {
+        "role": "tertiary",
+        "displayName": "Graph Pink",
+        "canonical": "#f7768e",
+        "tonalRamp": [
+          "oklch(15% 0.024 10)",
+          "oklch(26% 0.040 10)",
+          "oklch(38% 0.081 10)",
+          "oklch(49% 0.121 10)",
+          "oklch(61% 0.156 10)",
+          "oklch(72% 0.116 10)",
+          "oklch(84% 0.076 10)",
+          "oklch(95% 0.035 10)"
+        ]
+      },
+      "deleted-wine": {
+        "role": "neutral",
+        "displayName": "Deleted Wine",
+        "canonical": "#37222c",
+        "tonalRamp": [
+          "oklch(15% 0.005 350)",
+          "oklch(26% 0.009 350)",
+          "oklch(38% 0.018 350)",
+          "oklch(49% 0.027 350)",
+          "oklch(61% 0.035 350)",
+          "oklch(72% 0.026 350)",
+          "oklch(84% 0.017 350)",
+          "oklch(95% 0.008 350)"
+        ]
+      },
+      "added-teal": {
+        "role": "neutral",
+        "displayName": "Added Teal",
+        "canonical": "#20303b",
+        "tonalRamp": [
+          "oklch(15% 0.004 239)",
+          "oklch(26% 0.007 239)",
+          "oklch(38% 0.015 239)",
+          "oklch(49% 0.022 239)",
+          "oklch(61% 0.029 239)",
+          "oklch(72% 0.021 239)",
+          "oklch(84% 0.014 239)",
+          "oklch(95% 0.006 239)"
+        ]
+      },
+      "row-rule": {
+        "role": "neutral",
+        "displayName": "Row Rule",
+        "canonical": "#24283b",
+        "tonalRamp": [
+          "oklch(15% 0.005 275)",
+          "oklch(26% 0.009 275)",
+          "oklch(38% 0.018 275)",
+          "oklch(49% 0.027 275)",
+          "oklch(61% 0.035 275)",
+          "oklch(72% 0.026 275)",
+          "oklch(84% 0.017 275)",
+          "oklch(95% 0.008 275)"
+        ]
+      },
+      "row-hover": {
+        "role": "neutral",
+        "displayName": "Row Hover",
+        "canonical": "#292e42",
+        "tonalRamp": [
+          "oklch(15% 0.006 273)",
+          "oklch(26% 0.009 273)",
+          "oklch(38% 0.019 273)",
+          "oklch(49% 0.028 273)",
+          "oklch(61% 0.036 273)",
+          "oklch(72% 0.027 273)",
+          "oklch(84% 0.018 273)",
+          "oklch(95% 0.008 273)"
+        ]
+      },
+      "boot-black": {
+        "role": "neutral",
+        "displayName": "Boot Black",
+        "canonical": "#0d0e14",
+        "tonalRamp": [
+          "oklch(15% 0.002 278)",
+          "oklch(26% 0.003 278)",
+          "oklch(38% 0.006 278)",
+          "oklch(49% 0.010 278)",
+          "oklch(61% 0.012 278)",
+          "oklch(72% 0.009 278)",
+          "oklch(84% 0.006 278)",
+          "oklch(95% 0.003 278)"
+        ]
+      },
+      "cv-desk": {
+        "role": "neutral",
+        "displayName": "CV Desk",
+        "canonical": "#eef0f4",
+        "tonalRamp": [
+          "oklch(15% 0.001 265)",
+          "oklch(26% 0.001 265)",
+          "oklch(38% 0.003 265)",
+          "oklch(49% 0.004 265)",
+          "oklch(61% 0.006 265)",
+          "oklch(72% 0.004 265)",
+          "oklch(84% 0.003 265)",
+          "oklch(95% 0.001 265)"
+        ]
+      },
+      "cv-paper": {
+        "role": "neutral",
+        "displayName": "CV Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.000 90)",
+          "oklch(26% 0.000 90)",
+          "oklch(38% 0.000 90)",
+          "oklch(49% 0.000 90)",
+          "oklch(61% 0.000 90)",
+          "oklch(72% 0.000 90)",
+          "oklch(84% 0.000 90)",
+          "oklch(95% 0.000 90)"
+        ]
+      },
+      "cv-ink": {
+        "role": "neutral",
+        "displayName": "CV Ink",
+        "canonical": "#1d2230",
+        "tonalRamp": [
+          "oklch(15% 0.004 269)",
+          "oklch(26% 0.007 269)",
+          "oklch(38% 0.014 269)",
+          "oklch(49% 0.021 269)",
+          "oklch(61% 0.027 269)",
+          "oklch(72% 0.020 269)",
+          "oklch(84% 0.013 269)",
+          "oklch(95% 0.006 269)"
+        ]
+      },
+      "cv-link-blue": {
+        "role": "secondary",
+        "displayName": "CV Link Blue",
+        "canonical": "#1f4fa8",
+        "tonalRamp": [
+          "oklch(15% 0.023 261)",
+          "oklch(26% 0.039 261)",
+          "oklch(38% 0.078 261)",
+          "oklch(49% 0.116 261)",
+          "oklch(61% 0.150 261)",
+          "oklch(72% 0.111 261)",
+          "oklch(84% 0.073 261)",
+          "oklch(95% 0.034 261)"
+        ]
+      },
+      "cv-slate": {
+        "role": "neutral",
+        "displayName": "CV Slate",
+        "canonical": "#4a5266",
+        "tonalRamp": [
+          "oklch(15% 0.005 268)",
+          "oklch(26% 0.009 268)",
+          "oklch(38% 0.018 268)",
+          "oklch(49% 0.026 268)",
+          "oklch(61% 0.034 268)",
+          "oklch(72% 0.025 268)",
+          "oklch(84% 0.016 268)",
+          "oklch(95% 0.008 268)"
+        ]
+      },
+      "cv-label-gray": {
+        "role": "neutral",
+        "displayName": "CV Label Gray",
+        "canonical": "#6a7286",
+        "tonalRamp": [
+          "oklch(15% 0.005 268)",
+          "oklch(26% 0.008 268)",
+          "oklch(38% 0.017 268)",
+          "oklch(49% 0.025 268)",
+          "oklch(61% 0.032 268)",
+          "oklch(72% 0.024 268)",
+          "oklch(84% 0.016 268)",
+          "oklch(95% 0.007 268)"
+        ]
+      },
+      "cv-rule": {
+        "role": "neutral",
+        "displayName": "CV Rule",
+        "canonical": "#dfe2ea",
+        "tonalRamp": [
+          "oklch(15% 0.002 270)",
+          "oklch(26% 0.003 270)",
+          "oklch(38% 0.006 270)",
+          "oklch(49% 0.009 270)",
+          "oklch(61% 0.011 270)",
+          "oklch(72% 0.008 270)",
+          "oklch(84% 0.005 270)",
+          "oklch(95% 0.003 270)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name on the about pane only."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Bio paragraphs and palette text."
+      },
+      "body-dense": {
+        "displayName": "Body dense",
+        "purpose": "git log, diff, neofetch, projects table, palette output."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Pane titles, top bar, chips, buttons, group headings."
+      },
+      "fine": {
+        "displayName": "Fine",
+        "purpose": "Footer, colophon, fine print, kbd hints."
+      },
+      "cv-headline": {
+        "displayName": "CV Headline",
+        "purpose": "Name on /cv."
+      },
+      "cv-title": {
+        "displayName": "CV Title",
+        "purpose": "Job titles on /cv."
+      },
+      "cv-body": {
+        "displayName": "CV Body",
+        "purpose": "All /cv body copy; prints at 11pt."
+      },
+      "cv-section-label": {
+        "displayName": "CV Section Label",
+        "purpose": "Uppercase mono section labels; the bridge to the terminal."
+      }
+    },
+    "shadows": [
+      {
+        "name": "palette-float",
+        "value": "0 24px 64px #000a",
+        "purpose": "Command palette dialog only."
+      },
+      {
+        "name": "paper-lift",
+        "value": "0 1px 3px #0000001a",
+        "purpose": "CV sheet on screen; removed in print."
+      },
+      {
+        "name": "pane-flash",
+        "value": "inset 0 0 0 1px #e0af68",
+        "purpose": "Pane jumped to by shortcut key, with an amber border."
+      }
+    ],
+    "motion": [
+      {
+        "name": "pane-flash",
+        "value": "border-color .3s, box-shadow .3s",
+        "purpose": "Pane highlight on keyboard jump."
+      },
+      {
+        "name": "diff-type",
+        "value": "0.7s steps(28), 0.55s stagger",
+        "purpose": "Added diff lines type in once on scroll into view; static under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "cv-cols",
+        "value": "600px"
+      },
+      {
+        "name": "stack",
+        "value": "900px"
+      },
+      {
+        "name": "about-split",
+        "value": "1000px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Pane",
+      "kind": "card",
+      "refersTo": "pane",
+      "description": "The core titled terminal window; title set into the top border, shortcut key opposite.",
+      "html": "<section class=\"ds-pane\"><h2 class=\"ds-pt\">stack</h2><kbd class=\"ds-pk\">s</kbd><p>Content in moon ink, 14px mono.</p></section>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-pane{position:relative;margin-top:12px;border:1px solid var(--line);background:var(--pane);color:var(--ink);padding:20px 16px 16px;font:14px/1.6 var(--mono);transition:border-color .3s,box-shadow .3s} .ds-pane:hover{border-color:var(--amber);box-shadow:inset 0 0 0 1px var(--amber)} .ds-pt{position:absolute;top:-.8em;left:10px;margin:0;padding:0 2px;background:var(--bg);color:var(--amber);font:400 12px/1.6 var(--mono)} .ds-pt::before{content:'┤ ';color:var(--line)} .ds-pt::after{content:' ├';color:var(--line)} .ds-pk{position:absolute;top:-.8em;right:10px;padding:0 4px;background:var(--bg);color:var(--dim);font:11px/1.6 var(--mono)} .ds-pane p{margin:0}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Bordered, quiet action (copy, close); amber on hover.",
+      "html": "<button class=\"ds-btn-ghost\" type=\"button\">copy</button>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-btn-ghost{font:12px var(--mono);background:none;color:var(--dim);border:1px solid var(--line);padding:1px 8px;cursor:pointer} .ds-btn-ghost:hover{color:var(--amber);border-color:var(--amber)} .ds-btn-ghost:focus-visible{outline:2px solid var(--amber);outline-offset:2px}"
+    },
+    {
+      "name": "Text Button",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Borderless green command opener with a kbd hint.",
+      "html": "<button class=\"ds-btn-text\" type=\"button\">❯ commands <kbd>/</kbd></button>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-btn-text{background:none;border:0;padding:0;color:var(--green);font:12px/1.6 var(--mono);cursor:pointer} .ds-btn-text:hover{color:var(--amber)} .ds-btn-text:focus-visible{outline:2px solid var(--amber);outline-offset:2px} .ds-btn-text kbd{font:inherit;color:var(--dim);border:1px solid var(--line);padding:0 5px;margin-left:4px}"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Static skill/language tag in a slate box.",
+      "html": "<ul class=\"ds-chips\"><li>C++</li><li>Embedded C</li><li>English <span>· full professional</span></li></ul>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none;font-family:var(--mono);color:var(--ink)} .ds-chips li{font-size:12px;padding:2px 8px;border:1px solid var(--line)} .ds-chips span{color:var(--dim)}"
+    },
+    {
+      "name": "Command Input",
+      "kind": "input",
+      "refersTo": "command-palette",
+      "description": "The palette's prompt row: green chevron, borderless white input, amber caret.",
+      "html": "<form class=\"ds-cmd\"><label for=\"ds-in\">❯</label><input id=\"ds-in\" placeholder=\"type help\"></form>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-cmd{display:flex;gap:10px;padding:12px 16px;background:var(--bg);border:1px solid var(--line);font:14px/1.6 var(--mono)} .ds-cmd label{color:var(--green)} .ds-cmd input{flex:1;min-width:0;background:none;border:0;outline:none;color:#fff;font:inherit;caret-color:var(--amber)} .ds-cmd input::placeholder{color:var(--dim)} .ds-cmd:focus-within{border-color:var(--amber)}"
+    },
+    {
+      "name": "Top Bar",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Prompt-style header: amber user@host, dim links, dotted cyan underline.",
+      "html": "<nav class=\"ds-bar\"><span><b>vinicius@longaray</b>:~</span><a href=\"#\">github</a><a href=\"#\">linkedin</a><a href=\"#\">cv</a></nav>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-bar{display:flex;flex-wrap:wrap;gap:4px 20px;padding:10px 2px;background:var(--bg);color:var(--dim);font:12px/1.6 var(--mono);border-bottom:1px solid var(--line)} .ds-bar b{color:var(--amber);font-weight:400} .ds-bar a{color:var(--cyan);text-decoration:none;border-bottom:1px dotted currentColor} .ds-bar a:hover{color:var(--amber)} .ds-bar a:focus-visible{outline:2px solid var(--amber);outline-offset:2px}"
+    },
+    {
+      "name": "Diff",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "git-diff rows: pink on wine for removals, green on teal for additions.",
+      "html": "<div class=\"ds-diff\"><div class=\"ds-hunk\">@@ -2015,4 +2019,∞ @@</div><div class=\"ds-dl ds-del\"><span>-</span><span>role:</span><span>IT Architect</span></div><div class=\"ds-dl ds-add\"><span>+</span><span>role:</span><span>Embedded Software Engineer</span></div></div>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-diff{font:13px/1.6 var(--mono);background:var(--pane)} .ds-hunk{color:var(--cyan);padding:1px 8px 4px} .ds-dl{display:grid;grid-template-columns:2ch 9ch minmax(0,1fr);padding:1px 8px} .ds-del{background:#37222c;color:var(--pink)} .ds-add{background:#20303b;color:var(--green)} .ds-dl span:nth-child(2){opacity:.75}"
+    },
+    {
+      "name": "Projects Table",
+      "kind": "custom",
+      "refersTo": "table-header",
+      "description": "ps-style table: green header band, tabular PIDs, amber stars.",
+      "html": "<table class=\"ds-tbl\"><thead><tr><th>PID</th><th>NAME</th><th>LANG</th><th>★</th></tr></thead><tbody><tr><td class=\"pid\">1001</td><td><a href=\"#\">spectrum</a></td><td class=\"lang\">C++17</td><td class=\"n\">49</td></tr><tr><td class=\"pid\">1002</td><td><a href=\"#\">dotfiles</a></td><td class=\"lang\">Python</td><td class=\"n\">4</td></tr></tbody></table>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-tbl{width:100%;border-collapse:collapse;font:13px/1.6 var(--mono);color:var(--ink);background:var(--pane)} .ds-tbl th{text-align:left;font-weight:400;color:var(--bg);background:var(--green);padding:2px 10px} .ds-tbl td{padding:6px 10px;border-bottom:1px solid #24283b} .ds-tbl tbody tr:hover td{background:#292e42} .ds-tbl .pid{color:var(--dim);font-variant-numeric:tabular-nums} .ds-tbl .lang{color:var(--cyan)} .ds-tbl .n{color:var(--amber);text-align:right;font-variant-numeric:tabular-nums} .ds-tbl a{color:var(--cyan);text-decoration:none;border-bottom:1px dotted currentColor} .ds-tbl a:hover{color:var(--amber)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Night Shift Session",
+    "overview": "The site is a terminal left open late at night: Tokyo Night navy, an amber prompt waiting, and everything on screen is real output from a real shell. `git log --graph` is the career, `git diff` is the job change, `neofetch` is the actual setup, the projects table is `ps` sorted by stars. The mood is cozy, nerdy and warm: the warmth of a late session and the 16-bit games behind it, carried by quips in the small print rather than by decoration.\n\nDensity is a calm tmux layout, not a btop wall. Content sits in bordered panes on a 12-column grid, each pane titled in box-drawing brackets with a keyboard shortcut in its opposite corner. Monospace is everywhere because the whole world is a terminal, not as a \"technical\" garnish. The `/cv` page is a deliberate sub-theme: daylight, paper and system sans, built to be printed, linked back to the terminal by one mono nav line and mono section labels.\n\nThe one hard rejection: no fake terminal output. Every command, stat, diff and table shows real data; humor lives in the comments and fine print, never in invented numbers.",
+    "keyCharacteristics": [
+      "Tokyo Night (night) palette with Moon's lighter gray for readable small text.",
+      "JetBrains Mono, self-hosted, at 11–14px; one large bold name is the only display moment.",
+      "Bordered square panes, titled `┤ name ├` in amber, with a shortcut key in the top-right corner.",
+      "Flat surfaces; depth comes from the floor/pane two-tone and 1px slate rules.",
+      "Motion is rare and earned: a boot screen, a pane flash on jump, a diff that types itself once.",
+      "`/cv` is the light, print-first counterpart sharing the content, not the look."
+    ],
+    "rules": [
+      {
+        "name": "The Prompt Rule",
+        "body": "Amber means \"live\": titles, focus, hover, current values. Don't spend it on decoration or long passages of text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Syntax Rule",
+        "body": "Accents follow their shell meanings: cyan links and keys, green commands and additions, pink graph rails, deletions and errors. A new element takes the color its terminal equivalent would have.",
+        "section": "colors"
+      },
+      {
+        "name": "The Weight-Not-Size Rule",
+        "body": "On terminal pages, emphasis is bold or white or amber, never a bigger font. Only the name gets size.",
+        "section": "typography"
+      },
+      {
+        "name": "The TUI Rule",
+        "body": "Panes are separated by borders and tone, never by shadows. A shadow means \"this is above the page\".",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do show real data in every terminal construct: real commands, real setup, real star counts, real dates.",
+      "Do put new content in a titled pane with a shortcut key, and color its parts by their shell meaning (The Syntax Rule).",
+      "Do use amber for whatever is live, hovered or focused (The Prompt Rule).",
+      "Do keep small text on `dusk-gray` or brighter; it was chosen for contrast at 11–13px.",
+      "Do let wide content scroll inside its pane, and stack panes to full width under 900px.",
+      "Do keep motion one-shot and skippable, with a static fallback for reduced motion.",
+      "Do keep `/cv` light, sans and printable, sharing only the mono section labels with the terminal."
+    ],
+    "donts": [
+      "Don't fake terminal output: no invented stats, fake players, faux progress bars or made-up logs. Humor goes in comments and fine print.",
+      "Don't introduce a second display size on terminal pages; emphasize with weight, white or amber.",
+      "Don't use shadows to separate panes; borders and tone do that (The TUI Rule).",
+      "Don't load fonts or scripts from third parties; JetBrains Mono stays self-hosted."
+    ]
+  }
+}
