@@ -88,8 +88,9 @@ body.term { background: var(--bg); color: var(--ink); font: 14px/1.6 var(--mono)
 .replies a:hover::before, .replies a:focus-visible::before { content: "▸"; position: absolute; left: -1.4ch; color: var(--amber); }
 .replies b { color: var(--cyan); font-size: 12px; letter-spacing: .04em; }
 .nokeys .replies kbd { visibility: hidden; }
-.bio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px 32px; padding: 22px 4px 0; }
-.tip { grid-column: 1 / -1; font-size: 13px; color: var(--dim); border-left: 2px solid var(--amber); padding-left: 10px; }
+.p-bio { grid-column: span 12; }
+.bio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px 32px; }
+.tip { font-size: 13px; color: var(--dim); border-left: 2px solid var(--amber); padding-left: 10px; }
 .tip b { color: var(--amber); font-weight: 400; }
 @media (max-width: 900px) {
   .dlg { grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 14px 14px 16px; }

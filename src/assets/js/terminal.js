@@ -202,7 +202,7 @@
       out.scrollTop = out.scrollHeight;
     };
     // Pane names, plus the commands their titles print, jump to the pane.
-    const pane = PANES[cmd] || (cmd === "neofetch" ? "about" : cmd.startsWith("git log") ? "experience" : cmd.startsWith("git diff") ? "diff" : "");
+    const pane = PANES[cmd] || (cmd === "neofetch" || cmd.startsWith("cat about") ? "about" : cmd.startsWith("git log") ? "experience" : cmd.startsWith("git diff") ? "diff" : "");
     if (pane) { dlg.close(); return jump(pane); }
     switch (cmd) {
       case "help": case "?": case "man":

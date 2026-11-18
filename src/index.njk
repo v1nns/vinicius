@@ -20,7 +20,7 @@ scripts: [email.js, terminal.js]
 <main class="grid">
   {%- set first = timeline | firstJob %}
   {#- Title screen: the pixel scene, then Vinicius as an NPC. The replies are the page's sections. #}
-  <section class="title" id="about" aria-labelledby="h-name">
+  <section class="title" id="title" aria-labelledby="h-name">
     <div class="stage">
       {% include "title-scene.svg" %}
       <p class="start" aria-hidden="true">PRESS START</p>
@@ -48,10 +48,14 @@ scripts: [email.js, terminal.js]
         </ol>
       </nav>
     </div>
+  </section>
+
+  <section class="pane p-bio" id="about" aria-labelledby="h-about">
+    <h2 class="pt" id="h-about">about · cat about.txt</h2><kbd class="pk" title="Press a">a</kbd>
     <div class="bio">
       {% for p in profile.about %}<p>{{ p }}</p>{% endfor %}
-      <p class="tip"><b>RECRUITER TIP!</b> No commands required. Everything is on this page, and the one-page CV is at <a href="/cv/">/cv</a>.</p>
     </div>
+    <p class="tip"><b>RECRUITER TIP!</b> No commands required. Everything is on this page, and the one-page CV is at <a href="/cv/">/cv</a>.</p>
   </section>
 
   <section class="pane p-log" id="experience" aria-labelledby="h-exp">
