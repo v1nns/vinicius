@@ -106,7 +106,7 @@ scripts: [email.js, terminal.js]
         <thead><tr><th scope="col">PID</th><th scope="col">NAME</th><th scope="col">LANG</th><th scope="col">★</th><th scope="col">WHAT IT DOES</th></tr></thead>
         <tbody>
           {%- for p in projects | byStars(stars) %}
-          <tr><td class="pid">{{ 1000 + loop.index }}</td><td><a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a></td><td class="lang">{{ p.lang }}</td><td class="n">{% if p.stars != undefined %}<span class="meter" aria-hidden="true">{{ p.stars | meter(stars) | safe }}</span> {{ p.stars }}{% else %}–{% endif %}</td><td>{{ p.about }}</td></tr>
+          <tr><td class="pid">{{ 1000 + loop.index }}</td><td><a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a></td><td class="lang">{{ p.lang }}</td><td class="n">{% if p.stars != undefined %}<span class="meter" aria-hidden="true">{{ p.stars | meter(stars) | safe }}</span><span class="cnt">{{ p.stars }}</span>{% else %}–{% endif %}</td><td>{{ p.about }}</td></tr>
           {%- endfor %}
         </tbody>
       </table>

@@ -140,7 +140,8 @@ tbody tr:hover td { background: #292e42; }
 td.pid { color: var(--dim); font-variant-numeric: tabular-nums; }
 td.lang { color: var(--cyan); white-space: nowrap; }
 td.n { color: var(--amber); text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.meter { color: var(--line); letter-spacing: -.05em; margin-right: 4px; } .meter b { color: var(--amber); font-weight: 400; }
+.meter { color: var(--line); letter-spacing: -.05em; }
+td.n .cnt { display: inline-block; min-width: 4ch; text-align: right; } /* fixed width so every meter starts on the same column */ .meter b { color: var(--amber); font-weight: 400; }
 /* Phones: each process becomes a two-line entry (pid name lang ★n / description) instead of a sideways-scrolling table. */
 @media (max-width: 600px) {
   table { min-width: 0; }
@@ -154,6 +155,7 @@ td.n { color: var(--amber); text-align: right; font-variant-numeric: tabular-num
   td.n { grid-area: n; }
   td.n::before { content: "★ "; }
   .meter { display: none; }
+  td.n .cnt { min-width: 2ch; }
   td:nth-child(5) { grid-area: about; }
 }
 
