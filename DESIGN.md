@@ -205,7 +205,7 @@ A low-contrast navy night with four syntax-highlight accents, one of which (ambe
 - **The sprite** is drawn from the same palette: Boot Black outline, Headline-White shirt with a Pane Navy print in Prompt Amber, Graph Pink and Shell Green flowers, Rule Slate trousers. Its skin (`#e9b994`, shade `#c98a68`), hair (`#2b2330`, highlight `#6b5870`) and lip (`#c97f72`) tones exist only inside `me.svg`.
 
 ### CV sub-theme
-- **CV Desk** (`cv-desk`) behind a **CV Paper** (`cv-paper`) sheet, **CV Ink** (`cv-ink`) text, **CV Link Blue** (`cv-link-blue`) links, **CV Slate** (`cv-slate`) for the role line, **CV Label Gray** (`cv-label-gray`) for section labels and dates, **CV Rule** (`cv-rule`) under section labels.
+- **CV Desk** (`cv-desk`) behind a **CV Paper** (`cv-paper`) sheet, **CV Ink** (`cv-ink`) text, **CV Link Blue** (`cv-link-blue`) links, **CV Slate** (`cv-slate`) for the role line, **CV Label Gray** (`cv-label-gray`) for section labels and dates, **CV Rule** (`cv-rule`) under section labels. On `/cv` the focus ring switches to CV Link Blue, since amber is only 2:1 on white.
 
 ### Named Rules
 **The Prompt Rule.** Amber means "live": titles, focus, hover, current values. Don't spend it on decoration or long passages of text.
@@ -282,7 +282,7 @@ A `<dialog>` opened by `/`: 720px max, night-floor fill, slate border, the one r
 `ps`-style: a solid green header band with floor-colored text, rows ruled in `row-rule`, a `row-hover` band on hover, dim tabular PIDs, cyan languages, right-aligned amber star counts.
 
 ### Diff
-Lines on a 2ch sign / 9ch key / content grid. Removed lines are pink on `deleted-wine`, added lines green on `added-teal`, the hunk header cyan. On first scroll into view the added lines type themselves in (stepped clip-path) while removed lines fade to 55%; with reduced motion or no JS it's static. The career diff uses RPG vocabulary for its keys (`class:` for the role, `guild:` for the company). The footer colophon reuses it at 11px.
+Lines on a 2ch sign / 9ch key / content grid. Removed lines are pink on `deleted-wine`, added lines green on `added-teal`, the hunk header cyan. On first scroll into view the added lines type themselves in (stepped clip-path) while removed lines fade to 90% (any further and they drop under 4.5:1); with reduced motion or no JS it's static. The career diff uses RPG vocabulary for its keys (`class:` for the role, `guild:` for the company). The footer colophon reuses it at 11px.
 
 ### Neofetch sprite
 Where real neofetch draws its logo or image, the about pane shows a 16×24 sprite of Vinicius at 64×96px beside the info lines (host, rule, keys, swatches). The sprite breathes (the upper body drops 1px every 0.8s, stepped) and blinks every ~4s. Both loops live inside the SVG and stop under reduced motion. It keeps its place beside the info on phones.

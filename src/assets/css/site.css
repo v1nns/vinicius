@@ -33,7 +33,7 @@ body.term { background: var(--bg); color: var(--ink); font: 14px/1.6 var(--mono)
 .cmd-open { margin-left: auto; background: none; border: 0; padding: 0; color: var(--green); font: inherit; cursor: pointer; }
 .cmd-open:hover { color: var(--amber); }
 .cmd-open kbd { font: inherit; color: var(--dim); border: 1px solid var(--line); padding: 0 5px; margin-left: 4px; }
-@media (pointer: coarse) { .cmd-open kbd { display: none; } }
+@media (pointer: coarse) { .cmd-open kbd, .pk { display: none; } } /* key hints mean nothing on touch */
 
 .grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 26px 16px; padding: 30px 0 24px; }
 .pane { position: relative; min-width: 0; border: 1px solid var(--line); background: var(--pane); padding: 20px 16px 16px; display: grid; gap: 12px; align-content: start; transition: border-color .3s, box-shadow .3s; }
@@ -56,12 +56,12 @@ body.term { background: var(--bg); color: var(--ink); font: 14px/1.6 var(--mono)
 .dl.del { background: #37222c; color: #f7768e; }
 .dl.add { background: #20303b; color: #9ece6a; }
 .dl.note { grid-template-columns: 2ch minmax(0, 1fr); font-style: italic; }
-.dl .k { opacity: .75; }
+.dl.add .k { opacity: .75; } /* removed lines keep full-strength keys: pink on wine is only 5.6:1 to begin with */
 /* Played once when the panel scrolls into view; without JS or with reduced motion the diff is simply static. */
 .diff.ready .add { clip-path: inset(0 100% 0 0); }
 .diff.play .add { animation: type .7s steps(28) forwards; animation-delay: calc(var(--i) * .55s + .3s); }
 .diff.ready .del { transition: opacity .4s; }
-.diff.play .del { opacity: .55; transition-delay: calc(var(--i) * .55s + .2s); }
+.diff.play .del { opacity: .9; transition-delay: calc(var(--i) * .55s + .2s); }
 @keyframes type { to { clip-path: inset(0 0 0 0); } }
 
 .p-about { grid-template-columns: minmax(0, 1fr); }
@@ -216,6 +216,7 @@ body.crt::after { content: ""; position: fixed; inset: 0; pointer-events: none; 
 body.cv { background: #eef0f4; color: #1d2230; font: 15px/1.55 var(--sans); color-scheme: light;
   padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); padding-block: 20px 48px; }
 .cv a { color: #1f4fa8; }
+.cv :focus-visible { outline-color: #1f4fa8; } /* amber is only 2:1 on white */
 .cv-nav { max-width: 820px; margin: 0 auto 12px; font: 13px var(--mono); }
 .sheet { max-width: 820px; margin: 0 auto; background: #fff; padding: clamp(20px, 5vw, 48px); display: grid; gap: 26px; box-shadow: 0 1px 3px #0000001a; }
 .cv-head { display: grid; gap: 4px; }
