@@ -174,7 +174,7 @@ components:
 
 ## Overview
 
-**Creative North Star: "The Night Shift Session"**
+**Creative North Star: "The Longaray Chronicles Session"**
 
 The site is a terminal left open late at night: Tokyo Night navy, an amber prompt waiting, and everything on screen is real output from a real shell. `git log --graph` is the career, `git diff` is the job change, the projects table is `ps` sorted by live GitHub stars. The mood is cozy, nerdy and warm: the warmth of a late session and the 16-bit games behind it. The session opens on a title screen, **Longaray Chronicles**: a pixel night city with Vinicius standing by a save crystal, then a dialogue box where he introduces himself and the replies are the page's sections. Below that it is the terminal again, with game nods in the margins: a save point at the contact pane, job classes in the career diff, and a secrets counter in the command palette.
 
