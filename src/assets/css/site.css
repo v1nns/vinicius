@@ -123,7 +123,7 @@ body.term { background: var(--bg); color: var(--ink); font: 14px/1.6 var(--mono)
 .log b { color: #fff; font-weight: 700; }
 .d { color: var(--dim); }
 .m { color: var(--ink); }
-.q { color: var(--dim); font-style: italic; }
+.q { color: var(--green); font-style: italic; } /* comments carry the jokes; green like the diff's comment line */
 
 .grp { display: grid; gap: 6px; }
 .grp h3 { font-size: 12px; font-weight: 400; color: var(--dim); }
