@@ -70,6 +70,10 @@ body.term { background: var(--bg); color: var(--ink); font: 14px/1.6 var(--mono)
 .neo { display: grid; gap: 2px; align-content: start; font-size: 13px; min-width: 0; }
 .neo-cmd { color: var(--dim); margin-bottom: 6px; }
 .neo-cmd span { color: var(--green); }
+/* neofetch draws an image beside its output (kitty can show pictures); here it's a pixel sprite of me. */
+.neo-out { display: flex; gap: 18px; align-items: flex-start; }
+.neo-info { display: grid; gap: 2px; min-width: 0; }
+.sprite { flex: none; width: 64px; height: 96px; margin-top: 4px; image-rendering: pixelated; }
 .neo-host { color: var(--ink); }
 .neo-host b { color: var(--cyan); font-weight: 700; }
 .neo-rule { color: var(--dim); }
@@ -140,6 +144,32 @@ td.n { color: var(--amber); text-align: right; font-variant-numeric: tabular-num
 .copy { font: 12px var(--mono); background: none; color: var(--dim); border: 1px solid var(--line); padding: 1px 8px; cursor: pointer; }
 .copy:hover { color: var(--amber); border-color: var(--amber); }
 .fine { font-size: 11px; color: var(--dim); }
+
+/* contact as an RPG save point: crystal, SAVE GAME? and numbered slots with a cursor on hover/focus. */
+.save { display: flex; gap: 20px; align-items: flex-start; }
+.crystal { flex: none; width: 40px; height: 52px; }
+.save-menu { display: grid; gap: 8px; min-width: 0; }
+.save-q { color: #fff; letter-spacing: .08em; display: flex; flex-wrap: wrap; gap: 0 18px; align-items: baseline; }
+.p2 { color: var(--amber); font-size: 12px; }
+/* Blinks a few times when the pane scrolls into view, then stays lit (no endless blinking). */
+.p2.on { animation: p2 1.1s steps(1) 4; }
+@keyframes p2 { 50% { opacity: 0; } }
+.slots { counter-reset: slot; display: grid; gap: 4px; }
+.slots li { counter-increment: slot; display: grid; grid-template-columns: 4ch 9ch minmax(0, 1fr); align-items: baseline; }
+.slots li::before { content: "[" counter(slot) "]"; color: var(--dim); }
+.slots li:hover::before, .slots li:focus-within::before { content: "▸"; color: var(--amber); }
+.slots li > span:first-child { color: var(--dim); }
+.slots li > :last-child { justify-self: start; }
+@media (max-width: 480px) {
+  .save { gap: 14px; }
+  .crystal { width: 30px; height: 39px; }
+  .slots { gap: 8px; }
+  .slots li { grid-template-columns: 4ch minmax(0, 1fr); }
+  .slots li > span:first-child { font-size: 12px; }
+  .slots li > :last-child { grid-column: 2; }
+}
+.secrets { margin-left: auto; margin-right: 14px; font-size: 12px; color: var(--dim); }
+.secrets b { color: var(--amber); font-weight: 400; }
 
 .cmd { width: min(720px, calc(100vw - 32px)); max-height: min(70vh, 520px); margin: 12vh auto auto; padding: 0;
   background: var(--bg); color: var(--ink); border: 1px solid var(--line); font: 14px/1.6 var(--mono); box-shadow: 0 24px 64px #000a; }

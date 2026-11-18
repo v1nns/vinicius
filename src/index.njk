@@ -35,6 +35,9 @@ scripts: [email.js, terminal.js]
     </div>
     <aside class="neo" aria-label="My setup">
       <p class="neo-cmd"><span>$</span> neofetch</p>
+      <div class="neo-out">
+      <img class="sprite" src="/assets/images/me.svg" alt="Vinicius as a 16-bit sprite" width="64" height="96">
+      <div class="neo-info">
       <p class="neo-host"><b>vinicius</b>@<b>longaray</b></p>
       <p class="neo-rule" aria-hidden="true">-----------------</p>
       <dl>
@@ -46,6 +49,8 @@ scripts: [email.js, terminal.js]
         <dt>Font</dt><dd>JetBrains Mono</dd>
       </dl>
       <p class="neo-colors" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></p>
+      </div>
+      </div>
     </aside>
   </section>
 
@@ -106,19 +111,25 @@ scripts: [email.js, terminal.js]
   </section>
 
   <section class="pane p-contact" id="contact" aria-labelledby="h-contact">
-    <h2 class="pt" id="h-contact">contact · customer support</h2><kbd class="pk" title="Press c">c</kbd>
-    <ul class="links">
-      <li><span>github</span> <a href="{{ profile.links.github }}" target="_blank" rel="noopener">{{ profile.links.github_user }}</a></li>
-      <li><span>linkedin</span> <a href="{{ profile.links.linkedin }}" target="_blank" rel="noopener">{{ profile.links.linkedin_user }}</a></li>
-      <li><span>mail</span> <code class="email" data-user="{{ profile.email.user }}" data-domain="{{ profile.email.domain }}">ask on LinkedIn</code> <button class="copy" type="button" hidden>copy</button></li>
-      <li><span>cv</span> <a href="/cv/">one page, prints nicely</a></li>
-    </ul>
+    <h2 class="pt" id="h-contact">contact · save point</h2><kbd class="pk" title="Press c">c</kbd>
+    <div class="save">
+      <img class="crystal" src="/assets/images/save-crystal.svg" alt="" width="40" height="52">
+      <div class="save-menu">
+        <p class="save-q">SAVE GAME? <span class="p2">2P PRESS START</span></p>
+        <ol class="slots">
+          <li><span>github</span> <a href="{{ profile.links.github }}" target="_blank" rel="noopener">{{ profile.links.github_user }}</a></li>
+          <li><span>linkedin</span> <a href="{{ profile.links.linkedin }}" target="_blank" rel="noopener">{{ profile.links.linkedin_user }}</a></li>
+          <li><span>mail</span> <span><code class="email" data-user="{{ profile.email.user }}" data-domain="{{ profile.email.domain }}">ask on LinkedIn</code> <button class="copy" type="button" hidden>copy</button></span></li>
+          <li><span>cv</span> <a href="/cv/">one page, prints nicely</a></li>
+        </ol>
+      </div>
+    </div>
     <p class="fine">LIMITED WARRANTY. Free from defects in curiosity and work ethic. Void for tabs-vs-spaces debates, editor wars, and code written after 2 a.m.</p>
   </section>
 </main>
 
 <dialog class="cmd" id="cmd" aria-labelledby="h-cmd">
-  <div class="cmd-head"><h2 id="h-cmd">vinicius@longaray: ~</h2><button class="cmd-x" id="cmdClose" type="button" aria-label="Close">esc ✕</button></div>
+  <div class="cmd-head"><h2 id="h-cmd">vinicius@longaray: ~</h2><span class="secrets" id="secrets" hidden></span><button class="cmd-x" id="cmdClose" type="button" aria-label="Close">esc ✕</button></div>
   <div class="cmd-log" id="out" aria-live="polite"><p>Type <b>help</b> to list commands. Outside this window, press a · e · d · s · p · c to jump to a panel.</p></div>
   <form id="cmdForm" autocomplete="off">
     <label for="cmdIn">❯</label>
