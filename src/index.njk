@@ -102,8 +102,8 @@ scripts: [email.js, terminal.js]
       <table>
         <thead><tr><th scope="col">PID</th><th scope="col">NAME</th><th scope="col">LANG</th><th scope="col">★</th><th scope="col">WHAT IT DOES</th></tr></thead>
         <tbody>
-          {%- for p in projects %}
-          <tr><td class="pid">{{ 1000 + loop.index }}</td><td><a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a></td><td class="lang">{{ p.lang }}</td><td class="n">{{ p.stars }}</td><td>{{ p.about }}</td></tr>
+          {%- for p in projects | byStars(stars) %}
+          <tr><td class="pid">{{ 1000 + loop.index }}</td><td><a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a></td><td class="lang">{{ p.lang }}</td><td class="n">{{ p.stars if p.stars != undefined else "–" }}</td><td>{{ p.about }}</td></tr>
           {%- endfor %}
         </tbody>
       </table>
