@@ -16,5 +16,5 @@ bodyClass: term lost
 </main>
 <script>
   document.getElementById("path").textContent = location.pathname.replace(/^\//, "") || "this page";
-  addEventListener("keydown", e => { if (e.ctrlKey || e.metaKey || e.altKey) return; if (e.key === "y" || e.key === "Y") location.href = "/"; if (e.key === "c" || e.key === "C") location.href = "/cv/"; });
+  addEventListener("keydown", e => { if (e.ctrlKey || e.metaKey || e.altKey) return; try { if (localStorage.getItem("keys") === "off") return; } catch {} if (e.key === "y" || e.key === "Y") location.href = "/"; if (e.key === "c" || e.key === "C") location.href = "/cv/"; });
 </script>

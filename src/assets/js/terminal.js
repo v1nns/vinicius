@@ -62,8 +62,11 @@
   // ---------- panels + command palette ----------
   const PANES = { about: "about", experience: "experience", diff: "diff", stack: "stack", projects: "projects", contact: "contact" };
   const KEYS = { a: "about", e: "experience", d: "diff", s: "stack", p: "projects", c: "contact" };
+  const setKeys = on => { document.body.classList.toggle("nokeys", !on); store.set("keys", on ? "" : "off"); };
+  setKeys(store.get("keys") !== "off");
   function jump(id) {
     const el = $(id);
+    el.tabIndex = -1; el.focus({ preventScroll: true });
     el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
     el.classList.add("flash"); setTimeout(() => el.classList.remove("flash"), 900);
   }
@@ -198,14 +201,17 @@
       out.insertAdjacentHTML("beforeend", `<p><b>❯ ${esc(cmd)}</b><br>${html}</p>`);
       out.scrollTop = out.scrollHeight;
     };
-    if (PANES[cmd]) { dlg.close(); jump(PANES[cmd]); return say(`jumped to ${cmd}`); }
+    // Pane names, plus the commands their titles print, jump to the pane.
+    const pane = PANES[cmd] || (cmd === "neofetch" ? "about" : cmd.startsWith("git log") ? "experience" : cmd.startsWith("git diff") ? "diff" : "");
+    if (pane) { dlg.close(); return jump(pane); }
     switch (cmd) {
       case "help": case "?": case "man":
-        return say("about · experience · diff · stack · projects · contact · music · cv · crt · clear<br>RECRUITER TIP! You never need these. Everything is already on the page.");
+        return say("about · experience · diff · stack · projects · contact · music · cv · crt · keys · clear<br>RECRUITER TIP! You never need these. Everything is already on the page.");
       case "music": case "playlist":
         return say(`"You can understand someone's personality through their music." <a href="${$("playlist").href}" target="_blank" rel="noopener">open the playlist ↗</a>`);
       case "cv": location.href = "/cv/"; return say("opening cv...");
       case "crt": setCrt(!document.body.classList.contains("crt")); return say(`crt mode ${document.body.classList.contains("crt") ? "on" : "off"}`);
+      case "keys": setKeys(document.body.classList.contains("nokeys")); return say(`single-key shortcuts ${document.body.classList.contains("nokeys") ? "off" : "on"}`);
       case "clear": out.textContent = ""; return;
       case "ls": return say("about/  experience/  diff/  stack/  projects/  contact/  cv.pdf  <b>spectrum*</b>");
       case "sl": say("you meant ls. all aboard anyway."); secret("sl"); return train();
@@ -235,6 +241,10 @@
     if (e.target.closest && e.target.closest("input, textarea, [contenteditable]")) return;
     if (e.ctrlKey || e.metaKey || e.altKey) return;
     if (e.key === "/") { e.preventDefault(); open(); return; }
-    if (KEYS[e.key]) jump(KEYS[e.key]);
+    if (document.body.classList.contains("nokeys")) return;
+    if (KEYS[e.key]) return jump(KEYS[e.key]);
+    // 1-5 pick a reply in the title-screen dialogue.
+    const reply = /^[1-9]$/.test(e.key) && document.querySelectorAll(".replies a")[e.key - 1];
+    if (reply) reply.hash ? jump(reply.hash.slice(1)) : reply.click();
   });
 })();

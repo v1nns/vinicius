@@ -8,7 +8,7 @@
 - name: dotfiles
   url: https://github.com/v1nns/dotfiles
   lang: Python
-  about: His whole Linux setup, scripted. Ricing all the way to the top.
+  about: My whole Linux setup, scripted. Ricing all the way to the top.
 
 - name: yang
   url: https://github.com/v1nns/yang
@@ -23,7 +23,7 @@
 - name: EmotionPi
   url: https://github.com/v1nns/EmotionPi
   lang: C++ · Java
-  about: Facial expression recognition on a Raspberry Pi with OpenCV, plus an Android game. His final project (TCC) at PUCRS.
+  about: Facial expression recognition on a Raspberry Pi with OpenCV, plus an Android game. My final project (TCC) at PUCRS.
 
 - name: sddm-arcade
   url: https://github.com/v1nns/sddm-arcade

@@ -18,60 +18,63 @@ scripts: [email.js, terminal.js]
 </header>
 
 <main class="grid">
-  <section class="pane p-about" id="about" aria-labelledby="h-about">
-    <h2 class="pt" id="h-about">about</h2><kbd class="pk" title="Press a">a</kbd>
-    <div class="about-main">
-      <div class="who">
+  {%- set first = timeline | firstJob %}
+  {#- Title screen: the pixel scene, then Vinicius as an NPC. The replies are the page's sections. #}
+  <section class="title" id="about" aria-labelledby="h-name">
+    <div class="stage">
+      {% include "title-scene.svg" %}
+      <p class="start" aria-hidden="true">PRESS START</p>
+      <p class="copyr" aria-hidden="true">© 1993–{% year %} LONGARAY SOFT</p>
+    </div>
+    <div class="dlg">
+      <div class="talk">
         <img class="avatar" src="/assets/images/avatar-176.jpg" alt="Vinicius" width="88" height="88">
-        <div>
-          <h1 class="name">{{ profile.name }}</h1>
-          <p class="whoami"><span>$ whoami →</span> {{ profile.tagline }}</p>
-          {%- set first = timeline | firstJob %}
-          <p class="facts">{{ profile.location }} · <span id="uptime" data-since="{{ first.start }}">in software since {{ first.start | month }}</span></p>
+        <div class="talk-body">
+          <div class="npc">
+            <h1 class="name" id="h-name">{{ profile.name }}</h1>
+            <p class="cls">{{ profile.role }} · {{ timeline[0].company }}</p>
+          </div>
+          <p class="say">Hey, traveler! By day I write embedded software for network devices at {{ timeline[0].company }}; by night I'm on side quests in the terminal. Based in {{ profile.location | replace(", Brazil", "") }}, <span id="uptime" data-since="{{ first.start }}">in software since {{ first.start | month }}</span>. What brings you here?</p>
         </div>
       </div>
-      {% for p in profile.about %}<p class="bio">{{ p }}</p>{% endfor %}
+      <nav class="replies" aria-labelledby="h-reply">
+        <p class="rh" id="h-reply">reply</p>
+        <ol>
+          <li><kbd>1</kbd><a href="#experience"><span>Tell me about your journey.</span><b>experience</b></a></li>
+          <li><kbd>2</kbd><a href="#projects"><span>Show me your side quests.</span><b>projects</b></a></li>
+          <li><kbd>3</kbd><a href="#stack"><span>What's in your inventory?</span><b>stack</b></a></li>
+          <li><kbd>4</kbd><a href="#contact"><span>How do I reach you?</span><b>contact</b></a></li>
+          <li><kbd>5</kbd><a href="/cv/"><span>Just the one-page CV, please.</span><b>cv</b></a></li>
+        </ol>
+      </nav>
+    </div>
+    <div class="bio">
+      {% for p in profile.about %}<p>{{ p }}</p>{% endfor %}
       <p class="tip"><b>RECRUITER TIP!</b> No commands required. Everything is on this page, and the one-page CV is at <a href="/cv/">/cv</a>.</p>
     </div>
-    <aside class="neo" aria-label="My setup">
-      <p class="neo-cmd"><span>$</span> neofetch</p>
-      <div class="neo-out">
-      <img class="sprite" src="/assets/images/me.svg" alt="Vinicius as a 16-bit sprite" width="64" height="96">
-      <div class="neo-info">
-      <p class="neo-host"><b>vinicius</b>@<b>longaray</b></p>
-      <p class="neo-rule" aria-hidden="true">-----------------</p>
-      <dl>
-        <dt>OS</dt><dd>CachyOS</dd>
-        <dt>WM</dt><dd>Hyprland</dd>
-        <dt>Shell</dt><dd>zsh</dd>
-        <dt>Terminal</dt><dd>kitty</dd>
-        <dt>Editor</dt><dd>Neovim</dd>
-        <dt>Font</dt><dd>JetBrains Mono</dd>
-      </dl>
-      <p class="neo-colors" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></p>
-      </div>
-      </div>
-    </aside>
   </section>
 
   <section class="pane p-log" id="experience" aria-labelledby="h-exp">
     <h2 class="pt" id="h-exp">experience · git log --graph</h2><kbd class="pk" title="Press e">e</kbd>
     <ol class="log">
-      {%- for e in timeline %}
-      <li>
-        <div class="row"><span class="g" aria-hidden="true">*</span><div>
-          <span class="h">{{ ((e.company or e.school) ~ e.start) | sha }}</span>
-          {% if loop.first %}<span class="ref">(HEAD -> main)</span>{% endif %}
-          {% if e.tag %}<span class="ref">(tag: {{ e.tag }})</span>{% endif %}
-          <b>{{ e.role or e.degree }}</b> @ {{ e.company or e.school }} <span class="d">· {{ e.start | year }}–{{ e.end | year }}</span>
-        </div></div>
+      {%- for r in timeline | gitGraph %}
+      {%- if r.edge %}
+      <li class="edge" aria-hidden="true"><svg width="30" height="16" viewBox="0 0 30 16"><path d="M7 0V16" stroke="var(--pink)"/><path d="{{ 'M7 0C7 10 23 6 23 16' if r.edge == 'out' else 'M23 0C23 10 7 6 7 16' }}" stroke="{{ r.color }}"/></svg></li>
+      {%- else %}
+      {%- set e = r.entry %}
+      <li><span class="gc{{ ' side' if r.side }}" style="--side: {{ r.color }}" aria-hidden="true"><i{{ ' class="on-side"' | safe if r.node == 1 }}></i></span><div>
+        <span class="h">{{ ((e.company or e.school) ~ e.start) | sha }}</span>
+        {% if loop.first %}<span class="ref">(HEAD -> main)</span>{% endif %}
+        {% if e.tag %}<span class="ref tag" style="color: {{ r.color }}">(tag: {{ e.tag }})</span>{% endif %}
+        <b>{{ e.role or e.degree }}</b> @ {{ e.company or e.school }} <span class="d">· {{ e.start | year }}–{{ e.end | year }}</span>
         {%- for h in (e.highlights or ([e.summary] if e.summary else [])) %}
-        <div class="row"><span class="g" aria-hidden="true">|</span><div class="m">{{ h }}</div></div>
+        <p class="m">{{ h }}</p>
         {%- endfor %}
-        {%- if e.quip %}<div class="row"><span class="g" aria-hidden="true">|</span><div class="q"># {{ e.quip }}</div></div>{% endif %}
-      </li>
+        {%- if e.quip %}<p class="q"># {{ e.quip }}</p>{% endif %}
+      </div></li>
+      {%- endif %}
       {%- endfor %}
-      <li><div class="row"><span class="g" aria-hidden="true">*</span><div><span class="h">0000000</span> <span class="d">initial commit: a kid, a 16-bit console, too many RPGs</span></div></div></li>
+      <li><span class="gc" aria-hidden="true"><i></i></span><div><span class="h">0000000</span> <span class="d">initial commit: a kid, a 16-bit console, too many RPGs</span></div></li>
     </ol>
   </section>
 
@@ -103,7 +106,7 @@ scripts: [email.js, terminal.js]
         <thead><tr><th scope="col">PID</th><th scope="col">NAME</th><th scope="col">LANG</th><th scope="col">★</th><th scope="col">WHAT IT DOES</th></tr></thead>
         <tbody>
           {%- for p in projects | byStars(stars) %}
-          <tr><td class="pid">{{ 1000 + loop.index }}</td><td><a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a></td><td class="lang">{{ p.lang }}</td><td class="n">{{ p.stars if p.stars != undefined else "–" }}</td><td>{{ p.about }}</td></tr>
+          <tr><td class="pid">{{ 1000 + loop.index }}</td><td><a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a></td><td class="lang">{{ p.lang }}</td><td class="n">{% if p.stars != undefined %}<span class="meter" aria-hidden="true">{{ p.stars | meter(stars) | safe }}</span> {{ p.stars }}{% else %}–{% endif %}</td><td>{{ p.about }}</td></tr>
           {%- endfor %}
         </tbody>
       </table>
@@ -130,7 +133,7 @@ scripts: [email.js, terminal.js]
 
 <dialog class="cmd" id="cmd" aria-labelledby="h-cmd">
   <div class="cmd-head"><h2 id="h-cmd">vinicius@longaray: ~</h2><span class="secrets" id="secrets" hidden></span><button class="cmd-x" id="cmdClose" type="button" aria-label="Close">esc ✕</button></div>
-  <div class="cmd-log" id="out" aria-live="polite"><p>Type <b>help</b> to list commands. Outside this window, press a · e · d · s · p · c to jump to a panel.</p></div>
+  <div class="cmd-log" id="out" aria-live="polite"><p>Type <b>help</b> to list commands. Outside this window, press a · e · d · s · p · c or 1–5 to jump (<b>keys</b> turns that off).</p></div>
   <form id="cmdForm" autocomplete="off">
     <label for="cmdIn">❯</label>
     <input id="cmdIn" placeholder="type help" spellcheck="false" autocapitalize="off">
