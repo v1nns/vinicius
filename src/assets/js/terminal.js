@@ -52,11 +52,21 @@
     io.observe(diff);
   }
 
+  // ---------- save point: "2P PRESS START" blinks a few times the first time contact scrolls into view ----------
+  const p2 = document.querySelector(".p2");
+  if (p2 && !reduce && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { p2.classList.add("on"); io.disconnect(); } }, { threshold: 1 });
+    io.observe(p2);
+  }
+
   // ---------- panels + command palette ----------
   const PANES = { about: "about", experience: "experience", diff: "diff", stack: "stack", projects: "projects", contact: "contact" };
   const KEYS = { a: "about", e: "experience", d: "diff", s: "stack", p: "projects", c: "contact" };
+  const setKeys = on => { document.body.classList.toggle("nokeys", !on); store.set("keys", on ? "" : "off"); };
+  setKeys(store.get("keys") !== "off");
   function jump(id) {
     const el = $(id);
+    el.tabIndex = -1; el.focus({ preventScroll: true });
     el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
     el.classList.add("flash"); setTimeout(() => el.classList.remove("flash"), 900);
   }
@@ -167,6 +177,23 @@
     play(s, 45, () => { draw(); x--; f = (x >> 1) & 1; return x > -w; });
   }
 
+  // ---------- secrets: hidden commands, counted per visitor (remembered in localStorage) ----------
+  const SECRETS = ["spectrum", "matrix", "sl", "sudo", "editor"];
+  const found = new Set((store.get("secrets") || "").split(",").filter(s => SECRETS.includes(s)));
+  const counter = $("secrets");
+  const showCount = () => {
+    counter.hidden = false;
+    counter.innerHTML = `secrets <b>${found.size}/${SECRETS.length}</b>`;
+  };
+  showCount();
+  function secret(id) {
+    if (found.has(id)) return;
+    found.add(id); store.set("secrets", [...found].join(",")); showCount();
+    const all = found.size === SECRETS.length;
+    out.insertAdjacentHTML("beforeend", `<p><b>★ secret found · ${found.size}/${SECRETS.length}</b>${all ? `<br>all of them. you clearly read the manual. the <a href="#contact">save point</a> is at the bottom.` : ""}</p>`);
+    out.scrollTop = out.scrollHeight;
+  }
+
   function run(raw) {
     const cmd = raw.trim().toLowerCase();
     if (!cmd) return;
@@ -174,37 +201,50 @@
       out.insertAdjacentHTML("beforeend", `<p><b>❯ ${esc(cmd)}</b><br>${html}</p>`);
       out.scrollTop = out.scrollHeight;
     };
-    if (PANES[cmd]) { dlg.close(); jump(PANES[cmd]); return say(`jumped to ${cmd}`); }
+    // Pane names, plus the commands their titles print, jump to the pane.
+    const pane = PANES[cmd] || (cmd === "neofetch" || cmd.startsWith("cat about") ? "about" : cmd.startsWith("git log") ? "experience" : cmd.startsWith("git diff") ? "diff" : "");
+    if (pane) { dlg.close(); return jump(pane); }
     switch (cmd) {
       case "help": case "?": case "man":
-        return say("about · experience · diff · stack · projects · contact · music · cv · crt · clear<br>RECRUITER TIP! You never need these. Everything is already on the page.");
+        return say("about · experience · diff · stack · projects · contact · music · cv · crt · keys · clear<br>RECRUITER TIP! You never need these. Everything is already on the page.");
       case "music": case "playlist":
         return say(`"You can understand someone's personality through their music." <a href="${$("playlist").href}" target="_blank" rel="noopener">open the playlist ↗</a>`);
       case "cv": location.href = "/cv/"; return say("opening cv...");
       case "crt": setCrt(!document.body.classList.contains("crt")); return say(`crt mode ${document.body.classList.contains("crt") ? "on" : "off"}`);
+      case "keys": setKeys(document.body.classList.contains("nokeys")); return say(`single-key shortcuts ${document.body.classList.contains("nokeys") ? "off" : "on"}`);
       case "clear": out.textContent = ""; return;
       case "ls": return say("about/  experience/  diff/  stack/  projects/  contact/  cv.pdf  <b>spectrum*</b>");
-      case "sl": say("you meant ls. all aboard anyway."); return train();
-      case "cmatrix": case "matrix": say("wake up, recruiter..."); return matrix();
+      case "sl": say("you meant ls. all aboard anyway."); secret("sl"); return train();
+      case "cmatrix": case "matrix": say("wake up, recruiter..."); secret("matrix"); return matrix();
       case "spectrum": case "./spectrum":
         say(`♪ spectrum, but tiny. the real one lives in your terminal: <a href="https://github.com/v1nns/spectrum" target="_blank" rel="noopener">v1nns/spectrum ↗</a>`);
+        secret("spectrum");
         return visualizer();
       case "whoami": return say("vinicius: embedded software engineer, terminal enthusiast, RPG veteran");
-      case "vim": case "nvim": return say("good choice. (:q to exit. he promises.)");
-      case "emacs": return say("this warranty does not cover editor wars.");
+      case "vim": case "nvim": say("good choice. (:q to exit. he promises.)"); return secret("editor");
+      case "emacs": say("this warranty does not cover editor wars."); return secret("editor");
       case "exit": case "quit": case ":q": dlg.close(); return say("bye.");
       case "play": return say("overworld.exe isn't installed yet. coming in a future patch.");
     }
-    if (cmd.startsWith("sudo")) return say("vinicius is not in the sudoers file. This incident will be reported.");
+    if (cmd.startsWith("sudo")) { say("vinicius is not in the sudoers file. This incident will be reported."); return secret("sudo"); }
     if (cmd.startsWith("rm ")) return say("nice try.");
     say(`command not found: ${esc(cmd)}. try help`);
   }
+  // In-page links inside the palette close it and jump to the pane.
+  out.addEventListener("click", e => {
+    const a = e.target.closest('a[href^="#"]');
+    if (a) { e.preventDefault(); dlg.close(); jump(a.getAttribute("href").slice(1)); }
+  });
   $("cmdForm").addEventListener("submit", e => { e.preventDefault(); run(input.value); input.value = ""; });
   addEventListener("keydown", e => {
     if (!boot.hidden || dlg.open) return;
     if (e.target.closest && e.target.closest("input, textarea, [contenteditable]")) return;
     if (e.ctrlKey || e.metaKey || e.altKey) return;
     if (e.key === "/") { e.preventDefault(); open(); return; }
-    if (KEYS[e.key]) jump(KEYS[e.key]);
+    if (document.body.classList.contains("nokeys")) return;
+    if (KEYS[e.key]) return jump(KEYS[e.key]);
+    // 1-5 pick a reply in the title-screen dialogue.
+    const reply = /^[1-9]$/.test(e.key) && document.querySelectorAll(".replies a")[e.key - 1];
+    if (reply) reply.hash ? jump(reply.hash.slice(1)) : reply.click();
   });
 })();

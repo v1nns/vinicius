@@ -43,9 +43,12 @@ career_diff:
   range: 2018..2019
   hunk: "@@ -2015,4 +2019,∞ @@"
   rows:
-    - key: role
-      from: IT Architect @ Grupo Zaffari
-      to: Embedded Software Engineer @ Datacom
+    - key: class
+      from: IT Architect
+      to: Embedded Software Engineer
+    - key: guild
+      from: Grupo Zaffari
+      to: Datacom
     - key: domain
       from: retail · Point-of-Sale · store operations
       to: network devices · MPLS

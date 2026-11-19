@@ -1,0 +1,762 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T21:11:58Z",
+  "title": "Design System: viniciuslongaray.dev",
+  "extensions": {
+    "colorMeta": {
+      "night-floor": {
+        "role": "neutral",
+        "displayName": "Night Floor",
+        "canonical": "#16161e",
+        "tonalRamp": [
+          "oklch(15% 0.002 285)",
+          "oklch(26% 0.004 285)",
+          "oklch(38% 0.008 285)",
+          "oklch(49% 0.012 285)",
+          "oklch(61% 0.016 285)",
+          "oklch(72% 0.012 285)",
+          "oklch(84% 0.008 285)",
+          "oklch(95% 0.004 285)"
+        ]
+      },
+      "pane-navy": {
+        "role": "neutral",
+        "displayName": "Pane Navy",
+        "canonical": "#1a1b26",
+        "tonalRamp": [
+          "oklch(15% 0.003 280)",
+          "oklch(26% 0.005 280)",
+          "oklch(38% 0.011 280)",
+          "oklch(49% 0.016 280)",
+          "oklch(61% 0.021 280)",
+          "oklch(72% 0.016 280)",
+          "oklch(84% 0.010 280)",
+          "oklch(95% 0.005 280)"
+        ]
+      },
+      "rule-slate": {
+        "role": "neutral",
+        "displayName": "Rule Slate",
+        "canonical": "#3b4261",
+        "tonalRamp": [
+          "oklch(15% 0.008 274)",
+          "oklch(26% 0.014 274)",
+          "oklch(38% 0.027 274)",
+          "oklch(49% 0.041 274)",
+          "oklch(61% 0.053 274)",
+          "oklch(72% 0.039 274)",
+          "oklch(84% 0.026 274)",
+          "oklch(95% 0.012 274)"
+        ]
+      },
+      "moon-ink": {
+        "role": "neutral",
+        "displayName": "Moon Ink",
+        "canonical": "#c0caf5",
+        "tonalRamp": [
+          "oklch(15% 0.009 275)",
+          "oklch(26% 0.016 275)",
+          "oklch(38% 0.031 275)",
+          "oklch(49% 0.047 275)",
+          "oklch(61% 0.060 275)",
+          "oklch(72% 0.045 275)",
+          "oklch(84% 0.029 275)",
+          "oklch(95% 0.014 275)"
+        ]
+      },
+      "dusk-gray": {
+        "role": "neutral",
+        "displayName": "Dusk Gray",
+        "canonical": "#828bb8",
+        "tonalRamp": [
+          "oklch(15% 0.010 276)",
+          "oklch(26% 0.017 276)",
+          "oklch(38% 0.035 276)",
+          "oklch(49% 0.052 276)",
+          "oklch(61% 0.067 276)",
+          "oklch(72% 0.050 276)",
+          "oklch(84% 0.032 276)",
+          "oklch(95% 0.015 276)"
+        ]
+      },
+      "headline-white": {
+        "role": "neutral",
+        "displayName": "Headline White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.000 90)",
+          "oklch(26% 0.000 90)",
+          "oklch(38% 0.000 90)",
+          "oklch(49% 0.000 90)",
+          "oklch(61% 0.000 90)",
+          "oklch(72% 0.000 90)",
+          "oklch(84% 0.000 90)",
+          "oklch(95% 0.000 90)"
+        ]
+      },
+      "prompt-amber": {
+        "role": "primary",
+        "displayName": "Prompt Amber",
+        "canonical": "#e0af68",
+        "tonalRamp": [
+          "oklch(15% 0.016 75)",
+          "oklch(26% 0.027 75)",
+          "oklch(38% 0.054 75)",
+          "oklch(49% 0.081 75)",
+          "oklch(61% 0.104 75)",
+          "oklch(72% 0.077 75)",
+          "oklch(84% 0.050 75)",
+          "oklch(95% 0.023 75)"
+        ]
+      },
+      "link-cyan": {
+        "role": "secondary",
+        "displayName": "Link Cyan",
+        "canonical": "#7dcfff",
+        "tonalRamp": [
+          "oklch(15% 0.016 236)",
+          "oklch(26% 0.027 236)",
+          "oklch(38% 0.053 236)",
+          "oklch(49% 0.080 236)",
+          "oklch(61% 0.103 236)",
+          "oklch(72% 0.077 236)",
+          "oklch(84% 0.050 236)",
+          "oklch(95% 0.023 236)"
+        ]
+      },
+      "shell-green": {
+        "role": "secondary",
+        "displayName": "Shell Green",
+        "canonical": "#9ece6a",
+        "tonalRamp": [
+          "oklch(15% 0.021 130)",
+          "oklch(26% 0.035 130)",
+          "oklch(38% 0.071 130)",
+          "oklch(49% 0.106 130)",
+          "oklch(61% 0.137 130)",
+          "oklch(72% 0.102 130)",
+          "oklch(84% 0.066 130)",
+          "oklch(95% 0.031 130)"
+        ]
+      },
+      "graph-pink": {
+        "role": "tertiary",
+        "displayName": "Graph Pink",
+        "canonical": "#f7768e",
+        "tonalRamp": [
+          "oklch(15% 0.024 10)",
+          "oklch(26% 0.040 10)",
+          "oklch(38% 0.081 10)",
+          "oklch(49% 0.121 10)",
+          "oklch(61% 0.156 10)",
+          "oklch(72% 0.116 10)",
+          "oklch(84% 0.076 10)",
+          "oklch(95% 0.035 10)"
+        ]
+      },
+      "deleted-wine": {
+        "role": "neutral",
+        "displayName": "Deleted Wine",
+        "canonical": "#37222c",
+        "tonalRamp": [
+          "oklch(15% 0.005 350)",
+          "oklch(26% 0.009 350)",
+          "oklch(38% 0.018 350)",
+          "oklch(49% 0.027 350)",
+          "oklch(61% 0.035 350)",
+          "oklch(72% 0.026 350)",
+          "oklch(84% 0.017 350)",
+          "oklch(95% 0.008 350)"
+        ]
+      },
+      "added-teal": {
+        "role": "neutral",
+        "displayName": "Added Teal",
+        "canonical": "#20303b",
+        "tonalRamp": [
+          "oklch(15% 0.004 239)",
+          "oklch(26% 0.007 239)",
+          "oklch(38% 0.015 239)",
+          "oklch(49% 0.022 239)",
+          "oklch(61% 0.029 239)",
+          "oklch(72% 0.021 239)",
+          "oklch(84% 0.014 239)",
+          "oklch(95% 0.006 239)"
+        ]
+      },
+      "row-rule": {
+        "role": "neutral",
+        "displayName": "Row Rule",
+        "canonical": "#24283b",
+        "tonalRamp": [
+          "oklch(15% 0.005 275)",
+          "oklch(26% 0.009 275)",
+          "oklch(38% 0.018 275)",
+          "oklch(49% 0.027 275)",
+          "oklch(61% 0.035 275)",
+          "oklch(72% 0.026 275)",
+          "oklch(84% 0.017 275)",
+          "oklch(95% 0.008 275)"
+        ]
+      },
+      "row-hover": {
+        "role": "neutral",
+        "displayName": "Row Hover",
+        "canonical": "#292e42",
+        "tonalRamp": [
+          "oklch(15% 0.006 273)",
+          "oklch(26% 0.009 273)",
+          "oklch(38% 0.019 273)",
+          "oklch(49% 0.028 273)",
+          "oklch(61% 0.036 273)",
+          "oklch(72% 0.027 273)",
+          "oklch(84% 0.018 273)",
+          "oklch(95% 0.008 273)"
+        ]
+      },
+      "boot-black": {
+        "role": "neutral",
+        "displayName": "Boot Black",
+        "canonical": "#0d0e14",
+        "tonalRamp": [
+          "oklch(15% 0.002 278)",
+          "oklch(26% 0.003 278)",
+          "oklch(38% 0.006 278)",
+          "oklch(49% 0.010 278)",
+          "oklch(61% 0.012 278)",
+          "oklch(72% 0.009 278)",
+          "oklch(84% 0.006 278)",
+          "oklch(95% 0.003 278)"
+        ]
+      },
+      "boot-ink": {
+        "role": "neutral",
+        "displayName": "Boot Ink",
+        "canonical": "#a9b1d6",
+        "tonalRamp": [
+          "oklch(15% 0.008 275)",
+          "oklch(26% 0.014 275)",
+          "oklch(38% 0.027 275)",
+          "oklch(49% 0.041 275)",
+          "oklch(61% 0.053 275)",
+          "oklch(72% 0.039 275)",
+          "oklch(84% 0.026 275)",
+          "oklch(95% 0.012 275)"
+        ]
+      },
+      "rain-glint": {
+        "role": "secondary",
+        "displayName": "Rain Glint",
+        "canonical": "#d7f5b6",
+        "tonalRamp": [
+          "oklch(15% 0.013 129)",
+          "oklch(26% 0.022 129)",
+          "oklch(38% 0.045 129)",
+          "oklch(49% 0.067 129)",
+          "oklch(61% 0.087 129)",
+          "oklch(72% 0.064 129)",
+          "oklch(84% 0.042 129)",
+          "oklch(95% 0.020 129)"
+        ]
+      },
+      "swatch-blue": {
+        "role": "neutral",
+        "displayName": "Swatch Blue",
+        "canonical": "#7aa2f7",
+        "tonalRamp": [
+          "oklch(15% 0.020 264)",
+          "oklch(26% 0.034 264)",
+          "oklch(38% 0.067 264)",
+          "oklch(49% 0.101 264)",
+          "oklch(61% 0.130 264)",
+          "oklch(72% 0.096 264)",
+          "oklch(84% 0.063 264)",
+          "oklch(95% 0.029 264)"
+        ]
+      },
+      "swatch-purple": {
+        "role": "neutral",
+        "displayName": "Swatch Purple",
+        "canonical": "#bb9af7",
+        "tonalRamp": [
+          "oklch(15% 0.020 299)",
+          "oklch(26% 0.034 299)",
+          "oklch(38% 0.068 299)",
+          "oklch(49% 0.102 299)",
+          "oklch(61% 0.132 299)",
+          "oklch(72% 0.098 299)",
+          "oklch(84% 0.064 299)",
+          "oklch(95% 0.030 299)"
+        ]
+      },
+      "crt-scanline": {
+        "role": "neutral",
+        "displayName": "CRT Scanline",
+        "canonical": "#00000038"
+      },
+      "crt-vignette": {
+        "role": "neutral",
+        "displayName": "CRT Vignette",
+        "canonical": "#00000080"
+      },
+      "scene-haze": {
+        "role": "neutral",
+        "displayName": "Scene Haze",
+        "canonical": "#202436",
+        "tonalRamp": [
+          "oklch(15% 0.004 274)",
+          "oklch(26% 0.007 274)",
+          "oklch(38% 0.014 274)",
+          "oklch(49% 0.021 274)",
+          "oklch(61% 0.027 274)",
+          "oklch(72% 0.020 274)",
+          "oklch(84% 0.013 274)",
+          "oklch(95% 0.006 274)"
+        ]
+      },
+      "scene-street": {
+        "role": "neutral",
+        "displayName": "Scene Street",
+        "canonical": "#1f2335",
+        "tonalRamp": [
+          "oklch(15% 0.004 274)",
+          "oklch(26% 0.007 274)",
+          "oklch(38% 0.014 274)",
+          "oklch(49% 0.021 274)",
+          "oklch(61% 0.027 274)",
+          "oklch(72% 0.020 274)",
+          "oklch(84% 0.013 274)",
+          "oklch(95% 0.006 274)"
+        ]
+      },
+      "star-dim": {
+        "role": "neutral",
+        "displayName": "Star Dim",
+        "canonical": "#565f89",
+        "tonalRamp": [
+          "oklch(15% 0.008 274)",
+          "oklch(26% 0.014 274)",
+          "oklch(38% 0.029 274)",
+          "oklch(49% 0.042 274)",
+          "oklch(61% 0.055 274)",
+          "oklch(72% 0.040 274)",
+          "oklch(84% 0.026 274)",
+          "oklch(95% 0.012 274)"
+        ]
+      },
+      "moon-shade": {
+        "role": "neutral",
+        "displayName": "Moon Shade",
+        "canonical": "#c99a55",
+        "tonalRamp": [
+          "oklch(15% 0.012 75)",
+          "oklch(26% 0.022 75)",
+          "oklch(38% 0.043 75)",
+          "oklch(49% 0.064 75)",
+          "oklch(61% 0.083 75)",
+          "oklch(72% 0.061 75)",
+          "oklch(84% 0.039 75)",
+          "oklch(95% 0.019 75)"
+        ]
+      },
+      "crystal-light": {
+        "role": "secondary",
+        "displayName": "Crystal Light",
+        "canonical": "#e6f7ff",
+        "tonalRamp": [
+          "oklch(15% 0.003 228)",
+          "oklch(26% 0.005 228)",
+          "oklch(38% 0.011 228)",
+          "oklch(49% 0.016 228)",
+          "oklch(61% 0.021 228)",
+          "oklch(72% 0.015 228)",
+          "oklch(84% 0.010 228)",
+          "oklch(95% 0.005 228)"
+        ]
+      },
+      "crystal-shade": {
+        "role": "secondary",
+        "displayName": "Crystal Shade",
+        "canonical": "#3f86b8",
+        "tonalRamp": [
+          "oklch(15% 0.016 242)",
+          "oklch(26% 0.027 242)",
+          "oklch(38% 0.053 242)",
+          "oklch(49% 0.080 242)",
+          "oklch(61% 0.103 242)",
+          "oklch(72% 0.076 242)",
+          "oklch(84% 0.050 242)",
+          "oklch(95% 0.023 242)"
+        ]
+      },
+      "cv-desk": {
+        "role": "neutral",
+        "displayName": "CV Desk",
+        "canonical": "#eef0f4",
+        "tonalRamp": [
+          "oklch(15% 0.001 265)",
+          "oklch(26% 0.001 265)",
+          "oklch(38% 0.003 265)",
+          "oklch(49% 0.004 265)",
+          "oklch(61% 0.006 265)",
+          "oklch(72% 0.004 265)",
+          "oklch(84% 0.003 265)",
+          "oklch(95% 0.001 265)"
+        ]
+      },
+      "cv-paper": {
+        "role": "neutral",
+        "displayName": "CV Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.000 90)",
+          "oklch(26% 0.000 90)",
+          "oklch(38% 0.000 90)",
+          "oklch(49% 0.000 90)",
+          "oklch(61% 0.000 90)",
+          "oklch(72% 0.000 90)",
+          "oklch(84% 0.000 90)",
+          "oklch(95% 0.000 90)"
+        ]
+      },
+      "cv-ink": {
+        "role": "neutral",
+        "displayName": "CV Ink",
+        "canonical": "#1d2230",
+        "tonalRamp": [
+          "oklch(15% 0.004 269)",
+          "oklch(26% 0.007 269)",
+          "oklch(38% 0.014 269)",
+          "oklch(49% 0.021 269)",
+          "oklch(61% 0.027 269)",
+          "oklch(72% 0.020 269)",
+          "oklch(84% 0.013 269)",
+          "oklch(95% 0.006 269)"
+        ]
+      },
+      "cv-link-blue": {
+        "role": "secondary",
+        "displayName": "CV Link Blue",
+        "canonical": "#1f4fa8",
+        "tonalRamp": [
+          "oklch(15% 0.023 261)",
+          "oklch(26% 0.039 261)",
+          "oklch(38% 0.078 261)",
+          "oklch(49% 0.116 261)",
+          "oklch(61% 0.150 261)",
+          "oklch(72% 0.111 261)",
+          "oklch(84% 0.073 261)",
+          "oklch(95% 0.034 261)"
+        ]
+      },
+      "cv-slate": {
+        "role": "neutral",
+        "displayName": "CV Slate",
+        "canonical": "#4a5266",
+        "tonalRamp": [
+          "oklch(15% 0.005 268)",
+          "oklch(26% 0.009 268)",
+          "oklch(38% 0.018 268)",
+          "oklch(49% 0.026 268)",
+          "oklch(61% 0.034 268)",
+          "oklch(72% 0.025 268)",
+          "oklch(84% 0.016 268)",
+          "oklch(95% 0.008 268)"
+        ]
+      },
+      "cv-label-gray": {
+        "role": "neutral",
+        "displayName": "CV Label Gray",
+        "canonical": "#6a7286",
+        "tonalRamp": [
+          "oklch(15% 0.005 268)",
+          "oklch(26% 0.008 268)",
+          "oklch(38% 0.017 268)",
+          "oklch(49% 0.025 268)",
+          "oklch(61% 0.032 268)",
+          "oklch(72% 0.024 268)",
+          "oklch(84% 0.016 268)",
+          "oklch(95% 0.007 268)"
+        ]
+      },
+      "cv-rule": {
+        "role": "neutral",
+        "displayName": "CV Rule",
+        "canonical": "#dfe2ea",
+        "tonalRamp": [
+          "oklch(15% 0.002 270)",
+          "oklch(26% 0.003 270)",
+          "oklch(38% 0.006 270)",
+          "oklch(49% 0.009 270)",
+          "oklch(61% 0.011 270)",
+          "oklch(72% 0.008 270)",
+          "oklch(84% 0.005 270)",
+          "oklch(95% 0.003 270)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "The name in the dialogue and SAVE GAME? only."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "The dialogue line, bio paragraphs, replies and palette text; pane titles at 700."
+      },
+      "body-dense": {
+        "displayName": "Body dense",
+        "purpose": "git log, diff, projects table, palette output, the role line under the name."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Top bar, chips, buttons, PRESS START, reply destinations, group headings."
+      },
+      "fine": {
+        "displayName": "Fine",
+        "purpose": "Footer, colophon, fine print, kbd hints, the title screen's copyright, the reply panel's label."
+      },
+      "cv-headline": {
+        "displayName": "CV Headline",
+        "purpose": "Name on /cv."
+      },
+      "cv-title": {
+        "displayName": "CV Title",
+        "purpose": "Job titles on /cv."
+      },
+      "cv-body": {
+        "displayName": "CV Body",
+        "purpose": "All /cv body copy; prints at 11pt."
+      },
+      "cv-section-label": {
+        "displayName": "CV Section Label",
+        "purpose": "Uppercase mono section labels; the bridge to the terminal."
+      },
+      "alert": {
+        "displayName": "Alert",
+        "purpose": "The 404's CONTINUE? only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "palette-float",
+        "value": "0 24px 64px #000a",
+        "purpose": "Command palette dialog only."
+      },
+      {
+        "name": "paper-lift",
+        "value": "0 1px 3px #0000001a",
+        "purpose": "CV sheet on screen; removed in print."
+      },
+      {
+        "name": "pane-flash",
+        "value": "inset 0 0 0 1px #e0af68",
+        "purpose": "Pane jumped to by shortcut key, with an amber border."
+      }
+    ],
+    "motion": [
+      {
+        "name": "pane-flash",
+        "value": "border-color .3s, box-shadow .3s",
+        "purpose": "Pane highlight on keyboard jump."
+      },
+      {
+        "name": "diff-type",
+        "value": "0.7s steps(28), 0.55s stagger",
+        "purpose": "Added diff lines type in once on scroll into view; static under reduced motion."
+      },
+      {
+        "name": "press-start",
+        "value": "1.1s steps(1) x4",
+        "purpose": "PRESS START on the title screen blinks four times on load, then stays lit."
+      },
+      {
+        "name": "sprite-idle",
+        "value": "breathe 1.6s steps(1) infinite; blink 4.2s steps(1) infinite",
+        "purpose": "Sprite idle on the title scene, inside me.svg; off under reduced motion."
+      },
+      {
+        "name": "star-twinkle",
+        "value": "3s / 4.4s steps(1) infinite, to 20% opacity",
+        "purpose": "A few title-scene stars twinkle; off under reduced motion."
+      },
+      {
+        "name": "crystal-float",
+        "value": "float 2.4s steps(1) infinite, 1px",
+        "purpose": "Save crystal bob and glint, inside save-crystal.svg; off under reduced motion."
+      },
+      {
+        "name": "p2-blink",
+        "value": "1.1s steps(1) x4",
+        "purpose": "2P PRESS START blinks four times when first fully in view, then stays lit."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "save-compact",
+        "value": "480px"
+      },
+      {
+        "name": "table-stack",
+        "value": "600px"
+      },
+      {
+        "name": "cv-cols",
+        "value": "600px"
+      },
+      {
+        "name": "stack",
+        "value": "900px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Pane",
+      "kind": "card",
+      "refersTo": "pane",
+      "description": "The core titled terminal window; title set into the top border, shortcut key opposite.",
+      "html": "<section class=\"ds-pane\"><h2 class=\"ds-pt\">about · cat about.txt</h2><kbd class=\"ds-pk\">a</kbd><p>Content in moon ink, 14px mono.</p></section>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-pane{position:relative;margin-top:12px;border:1px solid var(--line);background:var(--pane);color:var(--ink);padding:20px 16px 16px;font:14px/1.6 var(--mono);transition:border-color .3s,box-shadow .3s} .ds-pane:hover{border-color:var(--amber);box-shadow:inset 0 0 0 1px var(--amber)} .ds-pt{position:absolute;top:-.8em;left:10px;margin:0;padding:0 2px;background:var(--bg);color:var(--amber);font:700 14px/1.6 var(--mono)} .ds-pt::before{content:'┤ ';color:var(--line);font-weight:400} .ds-pt::after{content:' ├';color:var(--line);font-weight:400} .ds-pk{position:absolute;top:-.8em;right:10px;padding:0 4px;background:var(--bg);color:var(--dim);font:11px/1.6 var(--mono)} .ds-pane p{margin:0}"
+    },
+    {
+      "name": "Dialogue",
+      "kind": "custom",
+      "refersTo": "dialogue",
+      "description": "The NPC dialogue under the title scene: portrait, name, role and greeting on the left; a numbered reply panel whose destinations sit in a fixed cyan column.",
+      "html": "<div class=\"ds-dlg\"><div class=\"ds-talk\"><div class=\"ds-av\"></div><div><p class=\"ds-name\">Vinicius Moura Longaray</p><p class=\"ds-cls\">Embedded Software Engineer · Datacom</p><p class=\"ds-say\">Hey, traveler! By day I write embedded software for network devices; by night I'm on side quests in the terminal. What brings you here?</p></div></div><nav class=\"ds-rep\"><p class=\"ds-rh\">reply</p><ol><li><kbd>1</kbd><a href=\"#\"><span>Tell me about your journey.</span><b>experience</b></a></li><li><kbd>2</kbd><a href=\"#\"><span>Any side quests?</span><b>projects</b></a></li><li><kbd>3</kbd><a href=\"#\"><span>How can I reach you?</span><b>contact</b></a></li></ol></nav></div>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-dlg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,300px);gap:24px;align-items:start;background:var(--pane);border:3px double var(--ink);outline:1px solid var(--bg);padding:18px 20px 20px 22px;color:var(--ink);font:14px/1.6 var(--mono)} .ds-dlg p,.ds-dlg ol{margin:0} .ds-talk{display:flex;gap:18px;min-width:0} .ds-av{flex:none;width:56px;height:56px;border:1px solid var(--line);background:var(--bg)} .ds-name{color:#fff;font-size:18px;font-weight:700;line-height:1.3} .ds-cls{color:var(--amber);font-size:13px;font-weight:700;margin:4px 0 10px} .ds-say{line-height:1.7;max-width:60ch} .ds-rep{position:relative;border:1px solid var(--line);background:var(--bg);padding:10px 6px 8px} .ds-rh{position:absolute;top:-.8em;left:10px;padding:0 4px;background:var(--pane);color:var(--dim);font-size:11px} .ds-rep ol{list-style:none;padding:0} .ds-rep li{display:grid;grid-template-columns:3ch minmax(0,1fr);align-items:center} .ds-rep kbd{font:11px/1.6 var(--mono);color:var(--dim);text-align:center} .ds-rep a{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:baseline;padding:6px 8px;color:var(--ink);text-decoration:none} .ds-rep a:hover,.ds-rep a:focus-visible{background:#292e42;outline:none} .ds-rep a:hover::before,.ds-rep a:focus-visible::before{content:'▸';position:absolute;left:-1.4ch;color:var(--amber)} .ds-rep b{color:var(--cyan);font-size:12px;letter-spacing:.04em}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Bordered, quiet action (copy, close); amber on hover.",
+      "html": "<button class=\"ds-btn-ghost\" type=\"button\">copy</button>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-btn-ghost{font:12px var(--mono);background:none;color:var(--dim);border:1px solid var(--line);padding:1px 8px;cursor:pointer} .ds-btn-ghost:hover{color:var(--amber);border-color:var(--amber)} .ds-btn-ghost:focus-visible{outline:2px solid var(--amber);outline-offset:2px}"
+    },
+    {
+      "name": "Text Button",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Borderless green command opener with a kbd hint.",
+      "html": "<button class=\"ds-btn-text\" type=\"button\">❯ commands <kbd>/</kbd></button>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-btn-text{background:none;border:0;padding:0;color:var(--green);font:12px/1.6 var(--mono);cursor:pointer} .ds-btn-text:hover{color:var(--amber)} .ds-btn-text:focus-visible{outline:2px solid var(--amber);outline-offset:2px} .ds-btn-text kbd{font:inherit;color:var(--dim);border:1px solid var(--line);padding:0 5px;margin-left:4px}"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Static skill/language tag in a slate box.",
+      "html": "<ul class=\"ds-chips\"><li>C++</li><li>Embedded C</li><li>English <span>· full professional</span></li></ul>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none;font-family:var(--mono);color:var(--ink)} .ds-chips li{font-size:12px;padding:2px 8px;border:1px solid var(--line)} .ds-chips span{color:var(--dim)}"
+    },
+    {
+      "name": "Command Input",
+      "kind": "input",
+      "refersTo": "command-palette",
+      "description": "The palette's prompt row: green chevron, borderless white input, amber caret.",
+      "html": "<form class=\"ds-cmd\"><label for=\"ds-in\">❯</label><input id=\"ds-in\" placeholder=\"type help\"></form>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-cmd{display:flex;gap:10px;padding:12px 16px;background:var(--bg);border:1px solid var(--line);font:14px/1.6 var(--mono)} .ds-cmd label{color:var(--green)} .ds-cmd input{flex:1;min-width:0;background:none;border:0;outline:none;color:#fff;font:inherit;caret-color:var(--amber)} .ds-cmd input::placeholder{color:var(--dim)} .ds-cmd:focus-within{border-color:var(--amber)}"
+    },
+    {
+      "name": "Top Bar",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Prompt-style header: amber user@host, dim links, dotted cyan underline.",
+      "html": "<nav class=\"ds-bar\"><span><b>vinicius@longaray</b>:~</span><a href=\"#\">github</a><a href=\"#\">linkedin</a><a href=\"#\">cv</a></nav>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-bar{display:flex;flex-wrap:wrap;gap:4px 20px;padding:10px 2px;background:var(--bg);color:var(--dim);font:12px/1.6 var(--mono);border-bottom:1px solid var(--line)} .ds-bar b{color:var(--amber);font-weight:400} .ds-bar a{color:var(--cyan);text-decoration:none;border-bottom:1px dotted currentColor} .ds-bar a:hover{color:var(--amber)} .ds-bar a:focus-visible{outline:2px solid var(--amber);outline-offset:2px}"
+    },
+    {
+      "name": "Git Log",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The career as a drawn git log --graph: pink main line and square nodes, a school as a green side branch with curved joins, green italic # comments.",
+      "html": "<ol class=\"ds-log\"><li><span class=\"ds-gc\"><i></i></span><div><p><span class=\"h\">3fa91c2</span> <span class=\"r\">(HEAD -&gt; main)</span> <b>Embedded Software Engineer</b></p><p class=\"ds-d\">Jan 2019 – Present</p><p class=\"ds-qt\"># still compiling</p></div></li><li class=\"ds-edge\"><svg viewBox=\"0 0 30 16\" width=\"30\" height=\"16\"><path d=\"M7 0V16\" stroke=\"#f7768e\"/><path d=\"M7 0C7 10 23 6 23 16\" stroke=\"#9ece6a\"/></svg></li><li><span class=\"ds-gc side\"><i class=\"s\"></i></span><div><p><span class=\"h\">8b02e7d</span> <span class=\"r g\">(tag: specialization)</span> <b>Software Engineering</b></p><p class=\"ds-d\">2018 – 2019</p></div></li><li class=\"ds-edge\"><svg viewBox=\"0 0 30 16\" width=\"30\" height=\"16\"><path d=\"M7 0V16\" stroke=\"#f7768e\"/><path d=\"M23 0C23 10 7 6 7 16\" stroke=\"#9ece6a\"/></svg></li><li><span class=\"ds-gc\"><i></i></span><div><p><span class=\"h\">c41d0aa</span> <b>IT Architect</b></p></div></li></ol>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-log{list-style:none;margin:0;padding:16px;display:grid;background:var(--pane);color:var(--ink);font:13px/1.6 var(--mono)} .ds-log p{margin:0} .ds-log li{display:grid;grid-template-columns:30px minmax(0,1fr);column-gap:10px} .ds-log li>div{padding:2px 0 12px} .ds-edge{display:block!important;height:16px} .ds-edge svg{display:block;fill:none;stroke-width:2} .ds-gc{position:relative;background:linear-gradient(var(--pink),var(--pink)) 6px 0/2px 100% no-repeat} .ds-gc.side{background:linear-gradient(var(--pink),var(--pink)) 6px 0/2px 100% no-repeat,linear-gradient(var(--green),var(--green)) 22px 0/2px 100% no-repeat} .ds-gc i{position:absolute;top:7px;left:3px;width:8px;height:8px;background:var(--pink);box-shadow:0 0 0 2px var(--pane)} .ds-gc i.s{left:19px;background:var(--green)} .ds-log .h{color:var(--amber)} .ds-log .r{color:var(--green)} .ds-log b{color:#fff} .ds-d{color:var(--dim)} .ds-qt{color:var(--green);font-style:italic}"
+    },
+    {
+      "name": "Diff",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "git-diff rows: pink on wine for removals, green on teal for additions.",
+      "html": "<div class=\"ds-diff\"><div class=\"ds-hunk\">@@ -2015,4 +2019,∞ @@</div><div class=\"ds-dl ds-del\"><span>-</span><span>role:</span><span>IT Architect</span></div><div class=\"ds-dl ds-add\"><span>+</span><span>role:</span><span>Embedded Software Engineer</span></div></div>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-diff{font:13px/1.6 var(--mono);background:var(--pane)} .ds-hunk{color:var(--cyan);padding:1px 8px 4px} .ds-dl{display:grid;grid-template-columns:2ch 9ch minmax(0,1fr);padding:1px 8px} .ds-del{background:#37222c;color:var(--pink)} .ds-add{background:#20303b;color:var(--green)} .ds-dl span:nth-child(2){opacity:.75}"
+    },
+    {
+      "name": "Save Point",
+      "kind": "custom",
+      "refersTo": "save-slot",
+      "description": "Contact as an RPG save menu: crystal, SAVE GAME?, numbered slots with an amber cursor on hover/focus.",
+      "html": "<div class=\"ds-save\"><svg class=\"ds-crystal\" viewBox=\"0 0 10 12\" width=\"40\" height=\"48\" shape-rendering=\"crispEdges\"><path fill=\"#0d0e14\" d=\"M4 0h2v1h1v1h1v1h1v1h1v2H9v1H8v1H7v1H6v1H4V9H3V8H2V7H1V6H0V4h1V3h1V2h1V1h1z\"/><path fill=\"#7dcfff\" d=\"M4 1h2v1h1v1h1v4H7v1H6v1H4V8H3V7H2V3h1V2h1z\"/><path fill=\"#e6f7ff\" d=\"M4 1h1v1H4zM3 2h1v1H3zM2 3h1v2H2z\"/><path fill=\"#3f86b8\" d=\"M7 3h1v4H7zM6 7h1v1H6zM5 8h1v1H5z\"/></svg><div><p class=\"ds-q\">SAVE GAME? <span>2P PRESS START</span></p><ol class=\"ds-slots\"><li><span>github</span><a href=\"#\">v1nns</a></li><li><span>linkedin</span><a href=\"#\">vinicius-longaray</a></li><li><span>cv</span><a href=\"#\">one page, prints nicely</a></li></ol></div></div>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-save{display:flex;gap:20px;align-items:flex-start;padding:16px;background:var(--pane);border:1px solid var(--line);font:14px/1.6 var(--mono);color:var(--ink)} .ds-crystal{flex:none} .ds-q{margin:0 0 8px;color:#fff;letter-spacing:.08em} .ds-q span{margin-left:18px;color:var(--amber);font-size:12px} .ds-slots{counter-reset:s;margin:0;padding:0;list-style:none;display:grid;gap:4px} .ds-slots li{counter-increment:s;display:grid;grid-template-columns:4ch 9ch auto;justify-content:start} .ds-slots li::before{content:'[' counter(s) ']';color:var(--dim)} .ds-slots li:hover::before,.ds-slots li:focus-within::before{content:'▸';color:var(--amber)} .ds-slots span{color:var(--dim)} .ds-slots a{color:var(--cyan);text-decoration:none;border-bottom:1px dotted currentColor} .ds-slots a:hover{color:var(--amber)} .ds-slots a:focus-visible{outline:2px solid var(--amber);outline-offset:2px}"
+    },
+    {
+      "name": "Projects Table",
+      "kind": "custom",
+      "refersTo": "table-header",
+      "description": "ps-style table sorted by live stars: green header band, tabular PIDs, an htop-style log-scale star meter before each amber count; restacks into two-line entries under 600px.",
+      "html": "<table class=\"ds-tbl\"><thead><tr><th>PID</th><th>NAME</th><th>LANG</th><th>★</th></tr></thead><tbody><tr><td class=\"pid\">1001</td><td><a href=\"#\">spectrum</a></td><td class=\"lang\">C++17</td><td class=\"n\"><span class=\"m\"><b>||||||||||</b></span><span class=\"c\">49</span></td></tr><tr><td class=\"pid\">1002</td><td><a href=\"#\">dotfiles</a></td><td class=\"lang\">Python</td><td class=\"n\"><span class=\"m\"><b>||||</b>······</span><span class=\"c\">4</span></td></tr></tbody></table>",
+      "css": ":host{--bg:#16161e;--pane:#1a1b26;--line:#3b4261;--ink:#c0caf5;--dim:#828bb8;--amber:#e0af68;--cyan:#7dcfff;--green:#9ece6a;--pink:#f7768e;--mono:'JetBrains Mono',ui-monospace,monospace;} .ds-tbl{width:100%;border-collapse:collapse;font:13px/1.6 var(--mono);color:var(--ink);background:var(--pane)} .ds-tbl th{text-align:left;font-weight:400;color:var(--bg);background:var(--green);padding:2px 10px} .ds-tbl td{padding:6px 10px;border-bottom:1px solid #24283b} .ds-tbl tbody tr:hover td{background:#292e42} .ds-tbl .pid{color:var(--dim);font-variant-numeric:tabular-nums} .ds-tbl .lang{color:var(--cyan)} .ds-tbl .n{color:var(--amber);text-align:right;font-variant-numeric:tabular-nums} .ds-tbl a{color:var(--cyan);text-decoration:none;border-bottom:1px dotted currentColor} .ds-tbl a:hover{color:var(--amber)} .ds-tbl .m{color:var(--line);letter-spacing:-.05em} .ds-tbl .m b{color:var(--amber);font-weight:400} .ds-tbl .c{display:inline-block;min-width:4ch;text-align:right}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Longaray Chronicles Session",
+    "overview": "The site is a terminal left open late at night: Tokyo Night navy, an amber prompt waiting, and everything on screen is real output from a real shell. `git log --graph` is the career, `git diff` is the job change, the projects table is `ps` sorted by live GitHub stars. The mood is cozy, nerdy and warm: the warmth of a late session and the 16-bit games behind it. The session opens on a title screen, **Longaray Chronicles**: a pixel night city with Vinicius standing by a save crystal, then a dialogue box where he introduces himself and the replies are the page's sections. Below that it is the terminal again, with game nods in the margins: a save point at the contact pane, job classes in the career diff, and a secrets counter in the command palette.\n\nDensity is a calm tmux layout, not a btop wall. Content sits in bordered panes on a 12-column grid, each pane titled in box-drawing brackets with a keyboard shortcut in its opposite corner. Monospace is everywhere because the whole world is a terminal, not as a \"technical\" garnish. The `/cv` page is a deliberate sub-theme: daylight, paper and system sans, built to be printed, linked back to the terminal by one mono nav line and mono section labels.\n\nThe one hard rejection: no fake terminal output. Every command, stat, diff and table shows real data; humor lives in the comments and fine print, never in invented numbers.",
+    "keyCharacteristics": [
+      "Tokyo Night (night) palette with Moon's lighter gray for readable small text.",
+      "JetBrains Mono, self-hosted, at 11–14px, with an 18px bold headline step; the only display moment is the pixel logotype on the title screen.",
+      "Bordered square panes, titled `┤ name ├` in amber, with a shortcut key in the top-right corner.",
+      "Flat surfaces; depth comes from the floor/pane two-tone and 1px slate rules.",
+      "Motion is rare and earned: a boot screen, PRESS START blinking four times, a pane flash on jump, a diff that types itself once, and the small idle loops of the pixel art.",
+      "16-bit games own the first screen (the title scene and dialogue) and stay in the margins everywhere after it.",
+      "`/cv` is the light, print-first counterpart sharing the content, not the look."
+    ],
+    "rules": [
+      {
+        "name": "The Prompt Rule",
+        "body": "Amber means \"live\": titles, focus, hover, current values. Don't spend it on decoration or long passages of text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Syntax Rule",
+        "body": "Accents follow their shell meanings: cyan links and keys, green commands and additions, pink graph rails, deletions and errors. A new element takes the color its terminal equivalent would have.",
+        "section": "colors"
+      },
+      {
+        "name": "The Weight-Not-Size Rule",
+        "body": "On terminal pages, emphasis is bold or white or amber. Size steps are fixed: 11 / 12 / 13 / 14 / 18px, plus the 404's 28px prompt. Nothing gets a size of its own; if 18px isn't enough, it isn't a type problem.",
+        "section": "typography"
+      },
+      {
+        "name": "The TUI Rule",
+        "body": "Panes are separated by borders and tone, never by shadows. A shadow means \"this is above the page\".",
+        "section": "elevation"
+      },
+      {
+        "name": "The Pixel Art Rule",
+        "body": "Pixel art is original, drawn on a tiny grid (16×24 for the sprite, 10×12 for the crystal, 5×7 for logotype letters), rendered with crisp edges, outlined in Boot Black and colored from this palette. The title scene is the one full pixel scene, and it lives only at the top of the home page; everywhere else pixel art is a cameo inside a pane (the save crystal), never a background, border or frame.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** show real data in every terminal construct: real commands, real setup, real star counts, real dates.",
+      "**Do** put new content in a titled pane with a shortcut key, and color its parts by their shell meaning (The Syntax Rule). The title screen is the only thing above the panes.",
+      "**Do** use amber for whatever is live, hovered or focused (The Prompt Rule).",
+      "**Do** keep small text on `dusk-gray` or brighter; it was chosen for contrast at 11–13px.",
+      "**Do** let wide content scroll inside its pane, and stack panes to full width under 900px.",
+      "**Do** keep motion one-shot and skippable, with a static fallback for reduced motion.",
+      "**Do** keep `/cv` light, sans and printable, sharing only the mono section labels with the terminal.",
+      "**Do** keep pixel art original, crisp and from this palette; the title scene is the only full scene (The Pixel Art Rule).",
+      "**Do** keep every reply's destination visible in plain words; the RPG line is flavor, the destination is the link.",
+      "**Do** keep `/cv` on one printed page on both A4 and Letter."
+    ],
+    "donts": [
+      "**Don't** fake terminal output: no invented stats, fake players, faux progress bars or made-up logs. Humor goes in comments and fine print.",
+      "**Don't** add font sizes beyond 11 / 12 / 13 / 14 / 18px on terminal pages; emphasize with weight, white or amber.",
+      "**Don't** use shadows to separate panes; borders and tone do that (The TUI Rule).",
+      "**Don't** load fonts or scripts from third parties; JetBrains Mono stays self-hosted.",
+      "**Don't** blink or loop forever in the page's text; attention effects run a few times and settle (the sprite, crystal and twinkling-star idles are the exception, and they stop under reduced motion)."
+    ]
+  }
+}
